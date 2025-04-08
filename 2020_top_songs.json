@@ -1,0 +1,524 @@
+{
+    "2020": [
+        {
+            "track_name": "The Box",
+            "artists": [
+                "Roddy Ricch"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Please Excuse Me for Being Antisocial",
+            "release_date": "2019-12-06",
+            "popularity": 83
+        },
+        {
+            "track_name": "Blinding Lights",
+            "artists": [
+                "The Weeknd"
+            ],
+            "genre": "rnb",
+            "album": "Blinding Lights",
+            "release_date": "2019-11-29",
+            "popularity": 24
+        },
+        {
+            "track_name": "positions",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "positions",
+            "release_date": "2020-10-23",
+            "popularity": 2
+        },
+        {
+            "track_name": "ROXANNE",
+            "artists": [
+                "Arizona Zervas"
+            ],
+            "genre": "Hip-Hop",
+            "album": "ROXANNE",
+            "release_date": "2019-10-10",
+            "popularity": 75
+        },
+        {
+            "track_name": "Say So",
+            "artists": [
+                "Doja Cat"
+            ],
+            "genre": "pop",
+            "album": "Hot Pink",
+            "release_date": "2019-11-07",
+            "popularity": 77
+        },
+        {
+            "track_name": "Watermelon Sugar",
+            "artists": [
+                "Harry Styles"
+            ],
+            "genre": "pop",
+            "album": "Fine Line",
+            "release_date": "2019-12-13",
+            "popularity": 86
+        },
+        {
+            "track_name": "Don't Start Now",
+            "artists": [
+                "Dua Lipa"
+            ],
+            "genre": "pop",
+            "album": "Don't Start Now",
+            "release_date": "2019-10-31",
+            "popularity": 75
+        },
+        {
+            "track_name": "death bed (coffee for your head)",
+            "artists": [
+                "Powfu",
+                "beabadoobee"
+            ],
+            "genre": "Hip-Hop",
+            "album": "death bed (coffee for your head)",
+            "release_date": "2020-02-08",
+            "popularity": 81
+        },
+        {
+            "track_name": "cardigan",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "genre": "country",
+            "album": "folklore",
+            "release_date": "2020-07-24",
+            "popularity": 49
+        },
+        {
+            "track_name": "everything i wanted",
+            "artists": [
+                "Billie Eilish"
+            ],
+            "genre": "pop",
+            "album": "everything i wanted",
+            "release_date": "2019-11-13",
+            "popularity": 85
+        },
+        {
+            "track_name": "What You Know Bout Love",
+            "artists": [
+                "Pop Smoke"
+            ],
+            "genre": "drill",
+            "album": "Shoot For The Stars Aim For The Moon",
+            "release_date": "2020-07-03",
+            "popularity": 79
+        },
+        {
+            "track_name": "DÁKITI",
+            "artists": [
+                "Bad Bunny",
+                "JHAYCO"
+            ],
+            "genre": "Reggaeton",
+            "album": "DÁKITI",
+            "release_date": "2020-10-30",
+            "popularity": 80
+        },
+        {
+            "track_name": "WAP (feat. Megan Thee Stallion)",
+            "artists": [
+                "Cardi B",
+                "Megan Thee Stallion"
+            ],
+            "genre": "Hip-Hop",
+            "album": "WAP (feat. Megan Thee Stallion)",
+            "release_date": "2020-08-07",
+            "popularity": 77
+        },
+        {
+            "track_name": "ROCKSTAR (feat. Roddy Ricch)",
+            "artists": [
+                "DaBaby",
+                "Roddy Ricch"
+            ],
+            "genre": "Hip-Hop",
+            "album": "BLAME IT ON BABY",
+            "release_date": "2020-04-17",
+            "popularity": 76
+        },
+        {
+            "track_name": "Blueberry Faygo",
+            "artists": [
+                "Lil Mosey"
+            ],
+            "genre": "cloud rap",
+            "album": "Certified Hitmaker",
+            "release_date": "2020-02-06",
+            "popularity": 74
+        },
+        {
+            "track_name": "Mood (feat. iann dior)",
+            "artists": [
+                "24kGoldn",
+                "iann dior"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Mood (feat. iann dior)",
+            "release_date": "2020-07-24",
+            "popularity": 7
+        },
+        {
+            "track_name": "Rain On Me (with Ariana Grande)",
+            "artists": [
+                "Lady Gaga",
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "Rain On Me (with Ariana Grande)",
+            "release_date": "2020-05-22",
+            "popularity": 72
+        },
+        {
+            "track_name": "Dynamite",
+            "artists": [
+                "BTS"
+            ],
+            "genre": "k-pop",
+            "album": "Dynamite",
+            "release_date": "2020-08-21",
+            "popularity": 3
+        },
+        {
+            "track_name": "Kings & Queens",
+            "artists": [
+                "Ava Max"
+            ],
+            "genre": "pop",
+            "album": "Heaven & Hell",
+            "release_date": "2020-09-18",
+            "popularity": 80
+        },
+        {
+            "track_name": "Adore You",
+            "artists": [
+                "Harry Styles"
+            ],
+            "genre": "pop",
+            "album": "Fine Line",
+            "release_date": "2019-12-13",
+            "popularity": 82
+        },
+        {
+            "track_name": "Falling",
+            "artists": [
+                "Trevor Daniel"
+            ],
+            "genre": "pop",
+            "album": "Falling",
+            "release_date": "2018-10-05",
+            "popularity": 69
+        },
+        {
+            "track_name": "Angels Like You",
+            "artists": [
+                "Miley Cyrus"
+            ],
+            "genre": "pop",
+            "album": "Plastic Hearts",
+            "release_date": "2020-11-27",
+            "popularity": 82
+        },
+        {
+            "track_name": "august",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "genre": "country",
+            "album": "folklore",
+            "release_date": "2020-07-24",
+            "popularity": 85
+        },
+        {
+            "track_name": "Lemonade (feat. Gunna, Don Toliver & NAV)",
+            "artists": [
+                "Internet Money",
+                "Gunna",
+                "Don Toliver",
+                "NAV"
+            ],
+            "genre": "rap",
+            "album": "B4 The Storm",
+            "release_date": "2020-08-29",
+            "popularity": 0
+        },
+        {
+            "track_name": "hot girl bummer",
+            "artists": [
+                "blackbear"
+            ],
+            "genre": "electronic",
+            "album": "everything means nothing",
+            "release_date": "2020-08-21",
+            "popularity": 75
+        },
+        {
+            "track_name": "Heartless",
+            "artists": [
+                "The Weeknd"
+            ],
+            "genre": "rnb",
+            "album": "After Hours",
+            "release_date": "2020-03-20",
+            "popularity": 79
+        },
+        {
+            "track_name": "Toosie Slide",
+            "artists": [
+                "Drake"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Toosie Slide",
+            "release_date": "2020-04-03",
+            "popularity": 71
+        },
+        {
+            "track_name": "Party Girl",
+            "artists": [
+                "StaySolidRocky"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Party Girl",
+            "release_date": "2020-04-21",
+            "popularity": 70
+        },
+        {
+            "track_name": "Memories",
+            "artists": [
+                "Maroon 5"
+            ],
+            "genre": "rock",
+            "album": "Memories",
+            "release_date": "2019-09-20",
+            "popularity": 32
+        },
+        {
+            "track_name": "Stuck with U (with Justin Bieber)",
+            "artists": [
+                "Ariana Grande",
+                "Justin Bieber"
+            ],
+            "genre": "pop",
+            "album": "Stuck with U",
+            "release_date": "2020-05-08",
+            "popularity": 80
+        },
+        {
+            "track_name": "Heather",
+            "artists": [
+                "Conan Gray"
+            ],
+            "genre": "seen live",
+            "album": "Kid Krow",
+            "release_date": "2020-03-20",
+            "popularity": 86
+        },
+        {
+            "track_name": "Intentions (feat. Quavo)",
+            "artists": [
+                "Justin Bieber",
+                "Quavo"
+            ],
+            "genre": "pop",
+            "album": "Changes",
+            "release_date": "2020-02-14",
+            "popularity": 77
+        },
+        {
+            "track_name": "No Idea",
+            "artists": [
+                "Don Toliver"
+            ],
+            "genre": "rap",
+            "album": "No Idea",
+            "release_date": "2019-05-29",
+            "popularity": 1
+        },
+        {
+            "track_name": "Life Is Good (feat. Drake)",
+            "artists": [
+                "Future",
+                "Drake"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Life Is Good (feat. Drake)",
+            "release_date": "2020-01-10",
+            "popularity": 74
+        },
+        {
+            "track_name": "HIGHEST IN THE ROOM",
+            "artists": [
+                "Travis Scott"
+            ],
+            "genre": "Hip-Hop",
+            "album": "HIGHEST IN THE ROOM",
+            "release_date": "2019-10-04",
+            "popularity": 86
+        },
+        {
+            "track_name": "Roses - Imanbek Remix",
+            "artists": [
+                "SAINt JHN",
+                "Imanbek"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Roses (Imanbek Remix)",
+            "release_date": "2019-09-13",
+            "popularity": 9
+        },
+        {
+            "track_name": "you broke me first",
+            "artists": [
+                "Tate McRae"
+            ],
+            "genre": "pop",
+            "album": "you broke me first",
+            "release_date": "2020-04-17",
+            "popularity": 10
+        },
+        {
+            "track_name": "Sunday Best",
+            "artists": [
+                "Surfaces"
+            ],
+            "genre": "pop",
+            "album": "Where the Light Is",
+            "release_date": "2019-01-06",
+            "popularity": 10
+        },
+        {
+            "track_name": "Shut up My Moms Calling",
+            "artists": [
+                "Hotel Ugly"
+            ],
+            "genre": "indie",
+            "album": "Shut up My Moms Calling",
+            "release_date": "2020-02-10",
+            "popularity": 87
+        },
+        {
+            "track_name": "Yummy",
+            "artists": [
+                "Justin Bieber"
+            ],
+            "genre": "pop",
+            "album": "Yummy",
+            "release_date": "2020-01-03",
+            "popularity": 66
+        },
+        {
+            "track_name": "Savage Remix (feat. Beyoncé)",
+            "artists": [
+                "Megan Thee Stallion",
+                "Beyoncé"
+            ],
+            "genre": "rap",
+            "album": "Savage Remix (feat. Beyoncé)",
+            "release_date": "2020-04-29",
+            "popularity": 62
+        },
+        {
+            "track_name": "How You Like That",
+            "artists": [
+                "BLACKPINK"
+            ],
+            "genre": "k-pop",
+            "album": "How You Like That",
+            "release_date": "2020-06-26",
+            "popularity": 1
+        },
+        {
+            "track_name": "motive (with Doja Cat)",
+            "artists": [
+                "Ariana Grande",
+                "Doja Cat"
+            ],
+            "genre": "pop",
+            "album": "Positions",
+            "release_date": "2020-10-30",
+            "popularity": 74
+        },
+        {
+            "track_name": "Monster (Shawn Mendes & Justin Bieber)",
+            "artists": [
+                "Shawn Mendes",
+                "Justin Bieber"
+            ],
+            "genre": "pop",
+            "album": "Monster",
+            "release_date": "2020-11-20",
+            "popularity": 69
+        },
+        {
+            "track_name": "Break My Heart",
+            "artists": [
+                "Dua Lipa"
+            ],
+            "genre": "pop",
+            "album": "Break My Heart",
+            "release_date": "2020-03-25",
+            "popularity": 61
+        },
+        {
+            "track_name": "Tusa",
+            "artists": [
+                "KAROL G",
+                "Nicki Minaj"
+            ],
+            "genre": "Reggaeton",
+            "album": "Tusa",
+            "release_date": "2019-11-07",
+            "popularity": 75
+        },
+        {
+            "track_name": "Hawái",
+            "artists": [
+                "Maluma"
+            ],
+            "genre": "mierda",
+            "album": "PAPI JUANCHO",
+            "release_date": "2020-08-21",
+            "popularity": 83
+        },
+        {
+            "track_name": "UN DIA (ONE DAY) (Feat. Tainy)",
+            "artists": [
+                "J Balvin",
+                "Dua Lipa",
+                "Bad Bunny",
+                "Tainy"
+            ],
+            "genre": "mierda",
+            "album": "UN DIA (ONE DAY) (Feat. Tainy)",
+            "release_date": "2020-07-24",
+            "popularity": 71
+        },
+        {
+            "track_name": "July",
+            "artists": [
+                "Noah Cyrus"
+            ],
+            "genre": "pop",
+            "album": "THE END OF EVERYTHING",
+            "release_date": "2020-05-15",
+            "popularity": 80
+        },
+        {
+            "track_name": "Before You Go",
+            "artists": [
+                "Lewis Capaldi"
+            ],
+            "genre": "pop",
+            "album": "Divinely Uninspired To A Hellish Extent (Extended Edition)",
+            "release_date": "2019-11-22",
+            "popularity": 84
+        }
+    ]
+}

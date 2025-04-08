@@ -1,0 +1,524 @@
+{
+    "2024": [
+        {
+            "track_name": "we can't be friends (wait for your love)",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "eternal sunshine",
+            "release_date": "2024-03-08",
+            "popularity": 82
+        },
+        {
+            "track_name": "BIRDS OF A FEATHER",
+            "artists": [
+                "Billie Eilish"
+            ],
+            "genre": "pop",
+            "album": "HIT ME HARD AND SOFT",
+            "release_date": "2024-05-17",
+            "popularity": 99
+        },
+        {
+            "track_name": "Die With A Smile",
+            "artists": [
+                "Lady Gaga",
+                "Bruno Mars"
+            ],
+            "genre": "pop",
+            "album": "Die With A Smile",
+            "release_date": "2024-08-16",
+            "popularity": 100
+        },
+        {
+            "track_name": "Espresso",
+            "artists": [
+                "Sabrina Carpenter"
+            ],
+            "genre": "pop",
+            "album": "Espresso",
+            "release_date": "2024-04-12",
+            "popularity": 89
+        },
+        {
+            "track_name": "Beautiful Things",
+            "artists": [
+                "Benson Boone"
+            ],
+            "genre": "pop",
+            "album": "Beautiful Things",
+            "release_date": "2024-01-18",
+            "popularity": 88
+        },
+        {
+            "track_name": "Not Like Us",
+            "artists": [
+                "Kendrick Lamar"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Not Like Us",
+            "release_date": "2024-05-04",
+            "popularity": 96
+        },
+        {
+            "track_name": "Good Luck, Babe!",
+            "artists": [
+                "Chappell Roan"
+            ],
+            "genre": "pop",
+            "album": "Good Luck, Babe!",
+            "release_date": "2024-04-05",
+            "popularity": 95
+        },
+        {
+            "track_name": "Please Please Please",
+            "artists": [
+                "Sabrina Carpenter"
+            ],
+            "genre": "pop",
+            "album": "Please Please Please",
+            "release_date": "2024-06-06",
+            "popularity": 85
+        },
+        {
+            "track_name": "TEXAS HOLD 'EM",
+            "artists": [
+                "Beyoncé"
+            ],
+            "genre": "rnb",
+            "album": "TEXAS HOLD 'EM",
+            "release_date": "2024-02-10",
+            "popularity": 63
+        },
+        {
+            "track_name": "APT.",
+            "artists": [
+                "ROSÉ",
+                "Bruno Mars"
+            ],
+            "genre": "pop",
+            "album": "APT.",
+            "release_date": "2024-10-18",
+            "popularity": 96
+        },
+        {
+            "track_name": "FE!N (feat. Playboi Carti)",
+            "artists": [
+                "Travis Scott",
+                "Playboi Carti"
+            ],
+            "genre": "Hip-Hop",
+            "album": "UTOPIA",
+            "release_date": "2023-07-28",
+            "popularity": 88
+        },
+        {
+            "track_name": "End of Beginning",
+            "artists": [
+                "Djo"
+            ],
+            "genre": "psychedelic pop",
+            "album": "DECIDE",
+            "release_date": "2022-09-16",
+            "popularity": 90
+        },
+        {
+            "track_name": "yes, and?",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "yes, and?",
+            "release_date": "2024-01-12",
+            "popularity": 75
+        },
+        {
+            "track_name": "Taste",
+            "artists": [
+                "Sabrina Carpenter"
+            ],
+            "genre": "pop",
+            "album": "Short n' Sweet",
+            "release_date": "2024-08-23",
+            "popularity": 80
+        },
+        {
+            "track_name": "Fortnight (feat. Post Malone)",
+            "artists": [
+                "Taylor Swift",
+                "Post Malone"
+            ],
+            "genre": "country",
+            "album": "THE TORTURED POETS DEPARTMENT",
+            "release_date": "2024-04-18",
+            "popularity": 85
+        },
+        {
+            "track_name": "Lose Control",
+            "artists": [
+                "Teddy Swims"
+            ],
+            "genre": "soul",
+            "album": "I've Tried Everything But Therapy (Part 1)",
+            "release_date": "2023-09-15",
+            "popularity": 92
+        },
+        {
+            "track_name": "Stick Season",
+            "artists": [
+                "Noah Kahan"
+            ],
+            "genre": "indie",
+            "album": "Stick Season",
+            "release_date": "2022-10-14",
+            "popularity": 88
+        },
+        {
+            "track_name": "I Had Some Help (Feat. Morgan Wallen)",
+            "artists": [
+                "Post Malone",
+                "Morgan Wallen"
+            ],
+            "genre": "Hip-Hop",
+            "album": "I Had Some Help",
+            "release_date": "2024-05-10",
+            "popularity": 85
+        },
+        {
+            "track_name": "Too Sweet",
+            "artists": [
+                "Hozier"
+            ],
+            "genre": "blues",
+            "album": "Unheard",
+            "release_date": "2024-03-22",
+            "popularity": 80
+        },
+        {
+            "track_name": "MILLION DOLLAR BABY",
+            "artists": [
+                "Tommy Richman"
+            ],
+            "genre": "rnb",
+            "album": "MILLION DOLLAR BABY",
+            "release_date": "2024-04-26",
+            "popularity": 19
+        },
+        {
+            "track_name": "LUNCH",
+            "artists": [
+                "Billie Eilish"
+            ],
+            "genre": "pop",
+            "album": "HIT ME HARD AND SOFT",
+            "release_date": "2024-05-17",
+            "popularity": 87
+        },
+        {
+            "track_name": "i like the way you kiss me",
+            "artists": [
+                "Artemas"
+            ],
+            "genre": "pop",
+            "album": "i like the way you kiss me",
+            "release_date": "2024-03-19",
+            "popularity": 85
+        },
+        {
+            "track_name": "Gata Only",
+            "artists": [
+                "FloyyMenor",
+                "Cris Mj"
+            ],
+            "genre": "Reggaeton",
+            "album": "Gata Only",
+            "release_date": "2024-02-02",
+            "popularity": 89
+        },
+        {
+            "track_name": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+            "artists": [
+                "The Weeknd",
+                "JENNIE",
+                "Lily-Rose Depp"
+            ],
+            "genre": "rnb",
+            "album": "The Idol Episode 4 (Music from the HBO Original Series)",
+            "release_date": "2023-06-23",
+            "popularity": 93
+        },
+        {
+            "track_name": "Guess featuring billie eilish",
+            "artists": [
+                "Charli xcx",
+                "Billie Eilish"
+            ],
+            "genre": "pop",
+            "album": "Guess featuring billie eilish",
+            "release_date": "2024-08-01",
+            "popularity": 82
+        },
+        {
+            "track_name": "HOT TO GO!",
+            "artists": [
+                "Chappell Roan"
+            ],
+            "genre": "pop",
+            "album": "The Rise and Fall of a Midwest Princess",
+            "release_date": "2023-09-22",
+            "popularity": 83
+        },
+        {
+            "track_name": "That’s So True",
+            "artists": [
+                "Gracie Abrams"
+            ],
+            "genre": "seen live",
+            "album": "The Secret of Us (Deluxe)",
+            "release_date": "2024-10-18",
+            "popularity": 97
+        },
+        {
+            "track_name": "I Can Do It With a Broken Heart",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "genre": "country",
+            "album": "THE TORTURED POETS DEPARTMENT",
+            "release_date": "2024-04-18",
+            "popularity": 82
+        },
+        {
+            "track_name": "luther (with sza)",
+            "artists": [
+                "Kendrick Lamar",
+                "SZA"
+            ],
+            "genre": "Hip-Hop",
+            "album": "GNX",
+            "release_date": "2024-11-21",
+            "popularity": 94
+        },
+        {
+            "track_name": "Timeless (feat. Playboi Carti)",
+            "artists": [
+                "The Weeknd",
+                "Playboi Carti"
+            ],
+            "genre": "rnb",
+            "album": "Timeless",
+            "release_date": "2024-09-27",
+            "popularity": 82
+        },
+        {
+            "track_name": "St. Chroma (feat. Daniel Caesar)",
+            "artists": [
+                "Tyler, The Creator",
+                "Daniel Caesar"
+            ],
+            "genre": "Hip-Hop",
+            "album": "CHROMAKOPIA",
+            "release_date": "2024-10-28",
+            "popularity": 83
+        },
+        {
+            "track_name": "Standing Next to You",
+            "artists": [
+                "Jung Kook"
+            ],
+            "genre": "k-pop",
+            "album": "GOLDEN",
+            "release_date": "2023-11-03",
+            "popularity": 84
+        },
+        {
+            "track_name": "Who",
+            "artists": [
+                "Jimin"
+            ],
+            "genre": "k-pop",
+            "album": "MUSE",
+            "release_date": "2024-07-19",
+            "popularity": 90
+        },
+        {
+            "track_name": "Saturn",
+            "artists": [
+                "SZA"
+            ],
+            "genre": "rnb",
+            "album": "Saturn",
+            "release_date": "2024-02-22",
+            "popularity": 83
+        },
+        {
+            "track_name": "WILDFLOWER",
+            "artists": [
+                "Billie Eilish"
+            ],
+            "genre": "pop",
+            "album": "HIT ME HARD AND SOFT",
+            "release_date": "2024-05-17",
+            "popularity": 96
+        },
+        {
+            "track_name": "A Bar Song (Tipsy)",
+            "artists": [
+                "Shaboozey"
+            ],
+            "genre": "country",
+            "album": "A Bar Song (Tipsy)",
+            "release_date": "2024-04-12",
+            "popularity": 88
+        },
+        {
+            "track_name": "Praise Jah In The Moonlight",
+            "artists": [
+                "YG Marley"
+            ],
+            "genre": "jamaican",
+            "album": "Praise Jah In The Moonlight",
+            "release_date": "2023-12-27",
+            "popularity": 78
+        },
+        {
+            "track_name": "La Diabla",
+            "artists": [
+                "Xavi"
+            ],
+            "genre": "pop",
+            "album": "La Diabla",
+            "release_date": "2023-11-30",
+            "popularity": 77
+        },
+        {
+            "track_name": "BELLAKEO",
+            "artists": [
+                "Peso Pluma",
+                "Anitta"
+            ],
+            "genre": "mexico",
+            "album": "BELLAKEO",
+            "release_date": "2023-12-07",
+            "popularity": 76
+        },
+        {
+            "track_name": "360",
+            "artists": [
+                "Charli xcx"
+            ],
+            "genre": "pop",
+            "album": "BRAT",
+            "release_date": "2024-06-07",
+            "popularity": 83
+        },
+        {
+            "track_name": "CARNIVAL",
+            "artists": [
+                "¥$",
+                "Kanye West",
+                "Ty Dolla $ign",
+                "Rich The Kid",
+                "Playboi Carti"
+            ],
+            "genre": "rap",
+            "album": "VULTURES 1",
+            "release_date": "2024-02-09",
+            "popularity": 24
+        },
+        {
+            "track_name": "Like That",
+            "artists": [
+                "Future",
+                "Metro Boomin",
+                "Kendrick Lamar"
+            ],
+            "genre": "Hip-Hop",
+            "album": "WE DON'T TRUST YOU",
+            "release_date": "2024-03-22",
+            "popularity": 88
+        },
+        {
+            "track_name": "redrum",
+            "artists": [
+                "21 Savage"
+            ],
+            "genre": "trap",
+            "album": "american dream",
+            "release_date": "2024-01-12",
+            "popularity": 84
+        },
+        {
+            "track_name": "São Paulo (feat. Anitta)",
+            "artists": [
+                "The Weeknd",
+                "Anitta"
+            ],
+            "genre": "rnb",
+            "album": "São Paulo",
+            "release_date": "2024-10-31",
+            "popularity": 75
+        },
+        {
+            "track_name": "obsessed",
+            "artists": [
+                "Olivia Rodrigo"
+            ],
+            "genre": "pop",
+            "album": "GUTS (spilled)",
+            "release_date": "2024-03-22",
+            "popularity": 79
+        },
+        {
+            "track_name": "the boy is mine",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "eternal sunshine",
+            "release_date": "2024-03-08",
+            "popularity": 83
+        },
+        {
+            "track_name": "Bed Chem",
+            "artists": [
+                "Sabrina Carpenter"
+            ],
+            "genre": "pop",
+            "album": "Short n' Sweet",
+            "release_date": "2024-08-23",
+            "popularity": 89
+        },
+        {
+            "track_name": "The Emptiness Machine",
+            "artists": [
+                "Linkin Park"
+            ],
+            "genre": "rock",
+            "album": "The Emptiness Machine",
+            "release_date": "2024-09-05",
+            "popularity": 83
+        },
+        {
+            "track_name": "Houdini",
+            "artists": [
+                "Eminem"
+            ],
+            "genre": "rap",
+            "album": "Houdini",
+            "release_date": "2024-05-31",
+            "popularity": 81
+        },
+        {
+            "track_name": "Water",
+            "artists": [
+                "Tyla"
+            ],
+            "genre": "rnb",
+            "album": "Water",
+            "release_date": "2023-07-28",
+            "popularity": 86
+        }
+    ]
+}

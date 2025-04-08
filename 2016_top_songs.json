@@ -1,0 +1,523 @@
+{
+    "2016": [
+        {
+            "track_name": "Pink + White",
+            "artists": [
+                "Frank Ocean"
+            ],
+            "genre": "rnb",
+            "album": "Blonde",
+            "release_date": "2016-08-20",
+            "popularity": 89
+        },
+        {
+            "track_name": "Into You",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "Dangerous Woman",
+            "release_date": "2016-04-01",
+            "popularity": 83
+        },
+        {
+            "track_name": "Starboy",
+            "artists": [
+                "The Weeknd",
+                "Daft Punk"
+            ],
+            "genre": "rnb",
+            "album": "Starboy",
+            "release_date": "2016-11-25",
+            "popularity": 90
+        },
+        {
+            "track_name": "goosebumps",
+            "artists": [
+                "Travis Scott"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Birds In The Trap Sing McKnight",
+            "release_date": "2016-09-16",
+            "popularity": 87
+        },
+        {
+            "track_name": "Sorry",
+            "artists": [
+                "Justin Bieber"
+            ],
+            "genre": "pop",
+            "album": "Purpose (Deluxe)",
+            "release_date": "2015-11-13",
+            "popularity": 86
+        },
+        {
+            "track_name": "One Dance",
+            "artists": [
+                "Drake",
+                "Wizkid",
+                "Kyla"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Views",
+            "release_date": "2016-05-06",
+            "popularity": 88
+        },
+        {
+            "track_name": "This Is What You Came For",
+            "artists": [
+                "Calvin Harris",
+                "Rihanna"
+            ],
+            "genre": "electronic",
+            "album": "This Is What You Came For",
+            "release_date": "2016-04-29",
+            "popularity": 80
+        },
+        {
+            "track_name": "Perfect",
+            "artists": [
+                "Ed Sheeran"
+            ],
+            "genre": "acoustic",
+            "album": "÷ (Deluxe)",
+            "release_date": "2017-03-03",
+            "popularity": 90
+        },
+        {
+            "track_name": "Ivy",
+            "artists": [
+                "Frank Ocean"
+            ],
+            "genre": "rnb",
+            "album": "Blonde",
+            "release_date": "2016-08-20",
+            "popularity": 86
+        },
+        {
+            "track_name": "Hello",
+            "artists": [
+                "Adele"
+            ],
+            "genre": "soul",
+            "album": "25",
+            "release_date": "2015-11-20",
+            "popularity": 73
+        },
+        {
+            "track_name": "Stitches",
+            "artists": [
+                "Shawn Mendes"
+            ],
+            "genre": "pop",
+            "album": "Handwritten",
+            "release_date": "2015-04-14",
+            "popularity": 85
+        },
+        {
+            "track_name": "Dangerous Woman",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "Dangerous Woman",
+            "release_date": "2016-04-01",
+            "popularity": 82
+        },
+        {
+            "track_name": "Drag Me Down",
+            "artists": [
+                "One Direction"
+            ],
+            "genre": "pop",
+            "album": "Made In The A.M. (Deluxe Edition)",
+            "release_date": "2015-11-13",
+            "popularity": 81
+        },
+        {
+            "track_name": "Closer",
+            "artists": [
+                "The Chainsmokers",
+                "Halsey"
+            ],
+            "genre": "electronic",
+            "album": "Closer",
+            "release_date": "2016-07-29",
+            "popularity": 88
+        },
+        {
+            "track_name": "Work",
+            "artists": [
+                "Rihanna",
+                "Drake"
+            ],
+            "genre": "pop",
+            "album": "ANTI (Deluxe)",
+            "release_date": "2016-01-28",
+            "popularity": 79
+        },
+        {
+            "track_name": "Stressed Out",
+            "artists": [
+                "Twenty One Pilots"
+            ],
+            "genre": "electronic",
+            "album": "Blurryface",
+            "release_date": "2015-05-15",
+            "popularity": 86
+        },
+        {
+            "track_name": "Love Yourself",
+            "artists": [
+                "Justin Bieber"
+            ],
+            "genre": "pop",
+            "album": "Purpose (Deluxe)",
+            "release_date": "2015-11-13",
+            "popularity": 86
+        },
+        {
+            "track_name": "Cheap Thrills (feat. Sean Paul)",
+            "artists": [
+                "Sia",
+                "Sean Paul"
+            ],
+            "genre": "female vocalists",
+            "album": "Cheap Thrills (feat. Sean Paul)",
+            "release_date": "2016-02-11",
+            "popularity": 68
+        },
+        {
+            "track_name": "Don't",
+            "artists": [
+                "Bryson Tiller"
+            ],
+            "genre": "rnb",
+            "album": "T R A P S O U L",
+            "release_date": "2015-10-02",
+            "popularity": 85
+        },
+        {
+            "track_name": "Nights",
+            "artists": [
+                "Frank Ocean"
+            ],
+            "genre": "rnb",
+            "album": "Blonde",
+            "release_date": "2016-08-20",
+            "popularity": 82
+        },
+        {
+            "track_name": "Adventure of a Lifetime",
+            "artists": [
+                "Coldplay"
+            ],
+            "genre": "rock",
+            "album": "A Head Full of Dreams",
+            "release_date": "2015-12-04",
+            "popularity": 86
+        },
+        {
+            "track_name": "Hotline Bling",
+            "artists": [
+                "Drake"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Views",
+            "release_date": "2016-05-06",
+            "popularity": 80
+        },
+        {
+            "track_name": "My Way",
+            "artists": [
+                "Calvin Harris"
+            ],
+            "genre": "electronic",
+            "album": "My Way",
+            "release_date": "2016-09-16",
+            "popularity": 78
+        },
+        {
+            "track_name": "CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\")",
+            "artists": [
+                "Justin Timberlake"
+            ],
+            "genre": "pop",
+            "album": "CAN'T STOP THE FEELING! (from DreamWorks Animation's \"TROLLS\")",
+            "release_date": "2016-05-06",
+            "popularity": 80
+        },
+        {
+            "track_name": "Cake By The Ocean",
+            "artists": [
+                "DNCE"
+            ],
+            "genre": "pop",
+            "album": "DNCE",
+            "release_date": "2016-11-18",
+            "popularity": 82
+        },
+        {
+            "track_name": "Work from Home (feat. Ty Dolla $ign)",
+            "artists": [
+                "Fifth Harmony",
+                "Ty Dolla $ign"
+            ],
+            "genre": "pop",
+            "album": "7/27 (Deluxe)",
+            "release_date": "2016-05-27",
+            "popularity": 79
+        },
+        {
+            "track_name": "We Don't Talk Anymore (feat. Selena Gomez)",
+            "artists": [
+                "Charlie Puth",
+                "Selena Gomez"
+            ],
+            "genre": "pop",
+            "album": "Nine Track Mind",
+            "release_date": "2016-01-29",
+            "popularity": 79
+        },
+        {
+            "track_name": "Needed Me",
+            "artists": [
+                "Rihanna"
+            ],
+            "genre": "pop",
+            "album": "ANTI (Deluxe)",
+            "release_date": "2016-01-28",
+            "popularity": 83
+        },
+        {
+            "track_name": "Ride",
+            "artists": [
+                "Twenty One Pilots"
+            ],
+            "genre": "electronic",
+            "album": "Blurryface",
+            "release_date": "2015-05-15",
+            "popularity": 83
+        },
+        {
+            "track_name": "When We Were Young",
+            "artists": [
+                "Adele"
+            ],
+            "genre": "soul",
+            "album": "25",
+            "release_date": "2015-11-20",
+            "popularity": 74
+        },
+        {
+            "track_name": "PILLOWTALK",
+            "artists": [
+                "ZAYN"
+            ],
+            "genre": "pop",
+            "album": "Mind Of Mine (Deluxe Edition)",
+            "release_date": "2016-03-25",
+            "popularity": 82
+        },
+        {
+            "track_name": "Lean On (feat. MØ & DJ Snake)",
+            "artists": [
+                "Major Lazer",
+                "MØ",
+                "DJ Snake"
+            ],
+            "genre": "seen live",
+            "album": "Peace Is The Mission : Extended",
+            "release_date": "2015-11-27",
+            "popularity": 73
+        },
+        {
+            "track_name": "Cold Water (feat. Justin Bieber & MØ)",
+            "artists": [
+                "Major Lazer",
+                "Justin Bieber",
+                "MØ"
+            ],
+            "genre": "seen live",
+            "album": "Cold Water (feat. Justin Bieber & MØ)",
+            "release_date": "2016-07-22",
+            "popularity": 76
+        },
+        {
+            "track_name": "I Took A Pill In Ibiza - Seeb Remix",
+            "artists": [
+                "Mike Posner",
+                "Seeb"
+            ],
+            "genre": "rnb",
+            "album": "At Night, Alone.",
+            "release_date": "2016-05-06",
+            "popularity": 82
+        },
+        {
+            "track_name": "Panda",
+            "artists": [
+                "Desiigner"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Panda",
+            "release_date": "2016-02-26",
+            "popularity": 67
+        },
+        {
+            "track_name": "Me, Myself & I",
+            "artists": [
+                "G-Eazy",
+                "Bebe Rexha"
+            ],
+            "genre": "Hip-Hop",
+            "album": "When It's Dark Out",
+            "release_date": "2015-12-04",
+            "popularity": 81
+        },
+        {
+            "track_name": "Me Too",
+            "artists": [
+                "Meghan Trainor"
+            ],
+            "genre": "pop",
+            "album": "Thank You (Deluxe Version)",
+            "release_date": "2017-05-12",
+            "popularity": 73
+        },
+        {
+            "track_name": "Same Old Love",
+            "artists": [
+                "Selena Gomez"
+            ],
+            "genre": "pop",
+            "album": "Revival (Deluxe)",
+            "release_date": "2015-10-09",
+            "popularity": 72
+        },
+        {
+            "track_name": "Too Good",
+            "artists": [
+                "Drake",
+                "Rihanna"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Views",
+            "release_date": "2016-05-06",
+            "popularity": 75
+        },
+        {
+            "track_name": "Let Me Love You",
+            "artists": [
+                "DJ Snake",
+                "Justin Bieber"
+            ],
+            "genre": "electronic",
+            "album": "Encore",
+            "release_date": "2016-08-05",
+            "popularity": 87
+        },
+        {
+            "track_name": "Wildest Dreams (Taylor's Version)",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "genre": "country",
+            "album": "1989 (Taylor's Version)",
+            "release_date": "2023-10-26",
+            "popularity": 76
+        },
+        {
+            "track_name": "7 Years",
+            "artists": [
+                "Lukas Graham"
+            ],
+            "genre": "pop",
+            "album": "Lukas Graham",
+            "release_date": "2016-04-01",
+            "popularity": 83
+        },
+        {
+            "track_name": "Send My Love (To Your New Lover)",
+            "artists": [
+                "Adele"
+            ],
+            "genre": "soul",
+            "album": "25",
+            "release_date": "2015-11-20",
+            "popularity": 75
+        },
+        {
+            "track_name": "Ophelia",
+            "artists": [
+                "The Lumineers"
+            ],
+            "genre": "folk",
+            "album": "Cleopatra",
+            "release_date": "2016-04-08",
+            "popularity": 82
+        },
+        {
+            "track_name": "Heathens",
+            "artists": [
+                "Twenty One Pilots"
+            ],
+            "genre": "electronic",
+            "album": "Heathens",
+            "release_date": "2016-06-16",
+            "popularity": 83
+        },
+        {
+            "track_name": "This Girl (Kungs Vs. Cookin' On 3 Burners)",
+            "artists": [
+                "Kungs",
+                "Cookin' On 3 Burners"
+            ],
+            "genre": "House",
+            "album": "Layers",
+            "release_date": "2016-11-04",
+            "popularity": 80
+        },
+        {
+            "track_name": "White Iverson",
+            "artists": [
+                "Post Malone"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Stoney (Deluxe)",
+            "release_date": "2016-12-09",
+            "popularity": 78
+        },
+        {
+            "track_name": "Antidote",
+            "artists": [
+                "Travis Scott"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Rodeo",
+            "release_date": "2015-09-04",
+            "popularity": 75
+        },
+        {
+            "track_name": "Low Life (feat. The Weeknd)",
+            "artists": [
+                "Future",
+                "The Weeknd"
+            ],
+            "genre": "Hip-Hop",
+            "album": "EVOL",
+            "release_date": "2016-04-13",
+            "popularity": 86
+        },
+        {
+            "track_name": "My House",
+            "artists": [
+                "Flo Rida"
+            ],
+            "genre": "Hip-Hop",
+            "album": "My House",
+            "release_date": "2015-04-07",
+            "popularity": 78
+        }
+    ]
+}

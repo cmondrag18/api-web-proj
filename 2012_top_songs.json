@@ -1,0 +1,518 @@
+{
+    "2012": [
+        {
+            "track_name": "Summertime Sadness",
+            "artists": [
+                "Lana Del Rey"
+            ],
+            "genre": "female vocalists",
+            "album": "Born To Die - The Paradise Edition",
+            "release_date": "2012-01-01",
+            "popularity": 84
+        },
+        {
+            "track_name": "Thinkin Bout You",
+            "artists": [
+                "Frank Ocean"
+            ],
+            "genre": "rnb",
+            "album": "channel ORANGE",
+            "release_date": "2012-07-10",
+            "popularity": 86
+        },
+        {
+            "track_name": "Locked out of Heaven",
+            "artists": [
+                "Bruno Mars"
+            ],
+            "genre": "pop",
+            "album": "Unorthodox Jukebox",
+            "release_date": "2012-12-07",
+            "popularity": 91
+        },
+        {
+            "track_name": "We Found Love",
+            "artists": [
+                "Rihanna",
+                "Calvin Harris"
+            ],
+            "genre": "pop",
+            "album": "Talk That Talk",
+            "release_date": "2011-11-19",
+            "popularity": 79
+        },
+        {
+            "track_name": "Call Me Maybe",
+            "artists": [
+                "Carly Rae Jepsen"
+            ],
+            "genre": "pop",
+            "album": "Kiss (Deluxe)",
+            "release_date": "2012-01-01",
+            "popularity": 75
+        },
+        {
+            "track_name": "Boyfriend",
+            "artists": [
+                "Justin Bieber"
+            ],
+            "genre": "pop",
+            "album": "Believe (Deluxe Edition)",
+            "release_date": "2012-06-15",
+            "popularity": 63
+        },
+        {
+            "track_name": "Lost",
+            "artists": [
+                "Frank Ocean"
+            ],
+            "genre": "rnb",
+            "album": "channel ORANGE",
+            "release_date": "2012-07-10",
+            "popularity": 85
+        },
+        {
+            "track_name": "Diamonds",
+            "artists": [
+                "Rihanna"
+            ],
+            "genre": "pop",
+            "album": "Unapologetic (Edited Version)",
+            "release_date": "2012-01-01",
+            "popularity": 74
+        },
+        {
+            "track_name": "Video Games",
+            "artists": [
+                "Lana Del Rey"
+            ],
+            "genre": "female vocalists",
+            "album": "Born To Die – Paradise Edition (Special Version)",
+            "release_date": "2012-01-01",
+            "popularity": 73
+        },
+        {
+            "track_name": "We Are Young (feat. Janelle Monáe)",
+            "artists": [
+                "fun.",
+                "Janelle Monáe"
+            ],
+            "genre": "indie pop",
+            "album": "Some Nights",
+            "release_date": "2012-02-21",
+            "popularity": 77
+        },
+        {
+            "track_name": "Everybody Talks",
+            "artists": [
+                "Neon Trees"
+            ],
+            "genre": "indie",
+            "album": "Picture Show",
+            "release_date": "2012-01-01",
+            "popularity": 80
+        },
+        {
+            "track_name": "Starships",
+            "artists": [
+                "Nicki Minaj"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Pink Friday ... Roman Reloaded",
+            "release_date": "2011-01-01",
+            "popularity": 76
+        },
+        {
+            "track_name": "Wild Ones (feat. Sia)",
+            "artists": [
+                "Flo Rida",
+                "Sia"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Wild Ones",
+            "release_date": "2012-06-22",
+            "popularity": 82
+        },
+        {
+            "track_name": "Die Young",
+            "artists": [
+                "Kesha"
+            ],
+            "genre": "pop",
+            "album": "Warrior (Expanded Edition)",
+            "release_date": "2012-11-30",
+            "popularity": 82
+        },
+        {
+            "track_name": "Part Of Me",
+            "artists": [
+                "Katy Perry"
+            ],
+            "genre": "pop",
+            "album": "Teenage Dream: The Complete Confection",
+            "release_date": "2012-03-12",
+            "popularity": 76
+        },
+        {
+            "track_name": "I Love It (feat. Charli XCX)",
+            "artists": [
+                "Icona Pop",
+                "Charli xcx"
+            ],
+            "genre": "electronic",
+            "album": "THIS IS... ICONA POP",
+            "release_date": "2013-08-27",
+            "popularity": 75
+        },
+        {
+            "track_name": "Domino",
+            "artists": [
+                "Jessie J"
+            ],
+            "genre": "pop",
+            "album": "Who You Are (Platinum Edition)",
+            "release_date": "2011-01-01",
+            "popularity": 70
+        },
+        {
+            "track_name": "Paradise",
+            "artists": [
+                "Coldplay"
+            ],
+            "genre": "rock",
+            "album": "Mylo Xyloto",
+            "release_date": "2011-10-24",
+            "popularity": 86
+        },
+        {
+            "track_name": "Rumour Has It",
+            "artists": [
+                "Adele"
+            ],
+            "genre": "soul",
+            "album": "21",
+            "release_date": "2011-01-24",
+            "popularity": 67
+        },
+        {
+            "track_name": "It's Time",
+            "artists": [
+                "Imagine Dragons"
+            ],
+            "genre": "indie",
+            "album": "Night Visions",
+            "release_date": "2012-09-04",
+            "popularity": 68
+        },
+        {
+            "track_name": "Want U Back",
+            "artists": [
+                "Cher Lloyd"
+            ],
+            "genre": "pop",
+            "album": "Sticks & Stones",
+            "release_date": "2012-10-02",
+            "popularity": 65
+        },
+        {
+            "track_name": "Titanium (feat. Sia)",
+            "artists": [
+                "David Guetta",
+                "Sia"
+            ],
+            "genre": "House",
+            "album": "Nothing but the Beat 2.0",
+            "release_date": "2011-08-24",
+            "popularity": 74
+        },
+        {
+            "track_name": "Girl on Fire",
+            "artists": [
+                "Alicia Keys"
+            ],
+            "genre": "soul",
+            "album": "Girl on Fire (Remixes) - EP",
+            "release_date": "2012-11-18",
+            "popularity": 78
+        },
+        {
+            "track_name": "Payphone",
+            "artists": [
+                "Maroon 5",
+                "Wiz Khalifa"
+            ],
+            "genre": "rock",
+            "album": "Overexposed (Deluxe)",
+            "release_date": "2012-01-01",
+            "popularity": 74
+        },
+        {
+            "track_name": "The One That Got Away",
+            "artists": [
+                "Katy Perry"
+            ],
+            "genre": "pop",
+            "album": "Teenage Dream: The Complete Confection",
+            "release_date": "2012-03-12",
+            "popularity": 74
+        },
+        {
+            "track_name": "Lights - Single Version",
+            "artists": [
+                "Ellie Goulding"
+            ],
+            "genre": "female vocalists",
+            "album": "Bright Lights (Lights Re-pack / Bonus Version)",
+            "release_date": "2010-01-01",
+            "popularity": 66
+        },
+        {
+            "track_name": "Good Time",
+            "artists": [
+                "Owl City",
+                "Carly Rae Jepsen"
+            ],
+            "genre": "electronic",
+            "album": "The Midsummer Station",
+            "release_date": "2012-08-17",
+            "popularity": 79
+        },
+        {
+            "track_name": "We Are Never Ever Getting Back Together",
+            "artists": [
+                "Taylor Swift"
+            ],
+            "genre": "country",
+            "album": "Red (Big Machine Radio Release Special)",
+            "release_date": "2012-10-22",
+            "popularity": 72
+        },
+        {
+            "track_name": "Candy",
+            "artists": [
+                "Robbie Williams"
+            ],
+            "genre": "pop",
+            "album": "Take The Crown (Deluxe Edition)",
+            "release_date": "2012-11-05",
+            "popularity": 69
+        },
+        {
+            "track_name": "Home",
+            "artists": [
+                "Phillip Phillips"
+            ],
+            "genre": "folk",
+            "album": "The World From The Side Of The Moon",
+            "release_date": "2012-01-01",
+            "popularity": 72
+        },
+        {
+            "track_name": "Don't You Worry Child - Radio Edit",
+            "artists": [
+                "Swedish House Mafia",
+                "John Martin"
+            ],
+            "genre": "House",
+            "album": "Don't You Worry Child",
+            "release_date": "2012-09-14",
+            "popularity": 82
+        },
+        {
+            "track_name": "Try",
+            "artists": [
+                "P!nk"
+            ],
+            "genre": "pop",
+            "album": "The Truth About Love",
+            "release_date": "2012-09-18",
+            "popularity": 84
+        },
+        {
+            "track_name": "How to Be a Heartbreaker",
+            "artists": [
+                "MARINA"
+            ],
+            "genre": "pop",
+            "album": "Electra Heart (Deluxe)",
+            "release_date": "2012-04-27",
+            "popularity": 71
+        },
+        {
+            "track_name": "Sexy And I Know It",
+            "artists": [
+                "LMFAO"
+            ],
+            "genre": "electronic",
+            "album": "Sorry For Party Rocking (Deluxe Version)",
+            "release_date": "2011-01-01",
+            "popularity": 66
+        },
+        {
+            "track_name": "Latch",
+            "artists": [
+                "Disclosure",
+                "Sam Smith"
+            ],
+            "genre": "electronic",
+            "album": "Settle (Deluxe)",
+            "release_date": "2013-06-03",
+            "popularity": 70
+        },
+        {
+            "track_name": "Turn Me On (feat. Nicki Minaj)",
+            "artists": [
+                "David Guetta",
+                "Nicki Minaj"
+            ],
+            "genre": "House",
+            "album": "Nothing but the Beat 2.0",
+            "release_date": "2011-08-24",
+            "popularity": 65
+        },
+        {
+            "track_name": "Pound The Alarm",
+            "artists": [
+                "Nicki Minaj"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Pink Friday ... Roman Reloaded (Deluxe)",
+            "release_date": "2012-01-01",
+            "popularity": 66
+        },
+        {
+            "track_name": "Let Me Love You (Until You Learn To Love Yourself)",
+            "artists": [
+                "Ne-Yo"
+            ],
+            "genre": "rnb",
+            "album": "R.E.D. (Deluxe Edition)",
+            "release_date": "2012-01-01",
+            "popularity": 71
+        },
+        {
+            "track_name": "Not Over You",
+            "artists": [
+                "Gavin DeGraw"
+            ],
+            "genre": "singer-songwriter",
+            "album": "Sweeter",
+            "release_date": "2011-09-16",
+            "popularity": 64
+        },
+        {
+            "track_name": "Battle Scars (with Guy Sebastian)",
+            "artists": [
+                "Lupe Fiasco",
+                "Guy Sebastian"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Food & Liquor II: The Great American Rap Album, Pt. 1",
+            "release_date": "2012-09-25",
+            "popularity": 64
+        },
+        {
+            "track_name": "Too Close",
+            "artists": [
+                "Alex Clare"
+            ],
+            "genre": "dubstep",
+            "album": "The Lateness Of The Hour",
+            "release_date": "2011",
+            "popularity": 61
+        },
+        {
+            "track_name": "It Will Rain",
+            "artists": [
+                "Bruno Mars"
+            ],
+            "genre": "pop",
+            "album": "The Twilight Saga: Breaking Dawn - Part 1 (Original Motion Picture Soundtrack)",
+            "release_date": "2011-11-04",
+            "popularity": 74
+        },
+        {
+            "track_name": "Scream",
+            "artists": [
+                "USHER"
+            ],
+            "genre": "rnb",
+            "album": "Looking 4 Myself (Expanded Edition)",
+            "release_date": "2012-06-12",
+            "popularity": 70
+        },
+        {
+            "track_name": "Skyfall",
+            "artists": [
+                "Adele"
+            ],
+            "genre": "soul",
+            "album": "Skyfall",
+            "release_date": "2012-10-04",
+            "popularity": 86
+        },
+        {
+            "track_name": "a thousand years",
+            "artists": [
+                "Christina Perri"
+            ],
+            "genre": "female vocalists",
+            "album": "a thousand years",
+            "release_date": "2011-10-18",
+            "popularity": 86
+        },
+        {
+            "track_name": "Breezeblocks",
+            "artists": [
+                "alt-J"
+            ],
+            "genre": "indie",
+            "album": "An Awesome Wave",
+            "release_date": "2012-09-18",
+            "popularity": 71
+        },
+        {
+            "track_name": "Beneath Your Beautiful (feat. Emeli Sandé)",
+            "artists": [
+                "Labrinth",
+                "Emeli Sandé"
+            ],
+            "genre": "electronic",
+            "album": "Electronic Earth (Expanded Edition)",
+            "release_date": "2012-04-02",
+            "popularity": 67
+        },
+        {
+            "track_name": "Brokenhearted",
+            "artists": [
+                "Karmin"
+            ],
+            "genre": "pop",
+            "album": "Hello",
+            "release_date": "2012-05-07",
+            "popularity": 64
+        },
+        {
+            "track_name": "Live While We're Young",
+            "artists": [
+                "One Direction"
+            ],
+            "genre": "pop",
+            "album": "Take Me Home (Expanded Edition)",
+            "release_date": "2012-11-12",
+            "popularity": 74
+        },
+        {
+            "track_name": "Young, Wild & Free (feat. Bruno Mars)",
+            "artists": [
+                "Snoop Dogg",
+                "Wiz Khalifa",
+                "Bruno Mars"
+            ],
+            "genre": "Hip-Hop",
+            "album": "Young, Wild & Free (feat. Bruno Mars)",
+            "release_date": "2011-10-11",
+            "popularity": 77
+        }
+    ]
+}
