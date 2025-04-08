@@ -1,0 +1,102 @@
+[
+    {
+        "Year": "2024",
+        "Election Data": [
+            {
+                "Party": "Democratic",
+                "Presidential Nominee": "Kamala Harris",
+                "Vice Presidential Nominee": "Tim Walz",
+                "Electoral Vote": "226",
+                "Electoral Vote %": "42%",
+                "Popular Vote": "75,019,230",
+                "Popular Vote %": "48.34%",
+                "Winner": "No"
+            },
+            {
+                "Party": "Republican",
+                "Presidential Nominee": "Donald J. Trump",
+                "Vice Presidential Nominee": "J.D. Vance",
+                "Electoral Vote": "312",
+                "Electoral Vote %": "58%",
+                "Popular Vote": "77,303,568",
+                "Popular Vote %": "49.81%",
+                "Winner": "Yes"
+            }
+        ]
+    },
+    {
+        "Year": "2020",
+        "Election Data": [
+            {
+                "Party": "Democratic",
+                "Presidential Nominee": "Joseph R. Biden",
+                "Vice Presidential Nominee": "Kamala Harris",
+                "Electoral Vote": "306",
+                "Electoral Vote %": "56.88%",
+                "Popular Vote": "81,268,773",
+                "Popular Vote %": "51.31%",
+                "Winner": "Yes"
+            },
+            {
+                "Party": "Republican",
+                "Presidential Nominee": "Donald Trump",
+                "Vice Presidential Nominee": "Mike Pence",
+                "Electoral Vote": "232",
+                "Electoral Vote %": "43.12%",
+                "Popular Vote": "74,216,728",
+                "Popular Vote %": "46.86%",
+                "Winner": "No"
+            }
+        ]
+    },
+    {
+        "Year": "2016",
+        "Election Data": [
+            {
+                "Party": "Democratic",
+                "Presidential Nominee": "Hillary Clinton",
+                "Vice Presidential Nominee": "Tim Kaine",
+                "Electoral Vote": "232",
+                "Electoral Vote %": "43.1%",
+                "Popular Vote": "65,788,564",
+                "Popular Vote %": "48.2%",
+                "Winner": "No"
+            },
+            {
+                "Party": "Republican",
+                "Presidential Nominee": "Donald Trump",
+                "Vice Presidential Nominee": "Mike Pence",
+                "Electoral Vote": "306",
+                "Electoral Vote %": "56.9%",
+                "Popular Vote": "62,955,340",
+                "Popular Vote %": "46.2%",
+                "Winner": "Yes"
+            }
+        ]
+    },
+    {
+        "Year": "2012",
+        "Election Data": [
+            {
+                "Party": "Democratic",
+                "Presidential Nominee": "Barack Obama",
+                "Vice Presidential Nominee": "Joseph Biden",
+                "Electoral Vote": "332",
+                "Electoral Vote %": "61.7%",
+                "Popular Vote": "65,899,660",
+                "Popular Vote %": "51.1%",
+                "Winner": "Yes"
+            },
+            {
+                "Party": "Republican",
+                "Presidential Nominee": "Mitt Romney",
+                "Vice Presidential Nominee": "Paul Ryan",
+                "Electoral Vote": "206",
+                "Electoral Vote %": "38.3%",
+                "Popular Vote": "60,932,152",
+                "Popular Vote %": "47.2%",
+                "Winner": "No"
+            }
+        ]
+    }
+]
