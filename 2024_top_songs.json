@@ -1,16 +1,6 @@
 {
     "2024": [
         {
-            "track_name": "we can't be friends (wait for your love)",
-            "artists": [
-                "Ariana Grande"
-            ],
-            "genre": "pop",
-            "album": "eternal sunshine",
-            "release_date": "2024-03-08",
-            "popularity": 82
-        },
-        {
             "track_name": "BIRDS OF A FEATHER",
             "artists": [
                 "Billie Eilish"
@@ -19,6 +9,16 @@
             "album": "HIT ME HARD AND SOFT",
             "release_date": "2024-05-17",
             "popularity": 99
+        },
+        {
+            "track_name": "we can't be friends (wait for your love)",
+            "artists": [
+                "Ariana Grande"
+            ],
+            "genre": "pop",
+            "album": "eternal sunshine",
+            "release_date": "2024-03-08",
+            "popularity": 82
         },
         {
             "track_name": "Die With A Smile",
@@ -79,7 +79,7 @@
             "genre": "pop",
             "album": "Please Please Please",
             "release_date": "2024-06-06",
-            "popularity": 85
+            "popularity": 86
         },
         {
             "track_name": "TEXAS HOLD 'EM",
