@@ -2,12 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
-urls = [
-    'https://www.presidency.ucsb.edu/statistics/elections/2024',
-    'https://www.presidency.ucsb.edu/statistics/elections/2020',
-    'https://www.presidency.ucsb.edu/statistics/elections/2016',
-    'https://www.presidency.ucsb.edu/statistics/elections/2012'
-]
+urls = ['https://www.presidency.ucsb.edu/statistics/elections/2024',
+        'https://www.presidency.ucsb.edu/statistics/elections/2020',
+        'https://www.presidency.ucsb.edu/statistics/elections/2016',
+        'https://www.presidency.ucsb.edu/statistics/elections/2012']
 
 all_election_data = []
 
@@ -38,16 +36,14 @@ for url in urls:
         winner = "Yes" if winner_image else "No"
         
         if party in ['Democratic', 'Republican']:
-            election_data.append({
-                'Party': party,
-                'Presidential Nominee': president,
-                'Vice Presidential Nominee': vice_president,
-                'Electoral Vote': electoral_vote,
-                'Electoral Vote %': electoral_percentage,
-                'Popular Vote': popular_vote,
-                'Popular Vote %': popular_percentage,
-                'Winner': winner
-            })
+            election_data.append({'Party': party,
+                                  'Presidential Nominee': president,
+                                  'Vice Presidential Nominee': vice_president,
+                                  'Electoral Vote': electoral_vote,
+                                  'Electoral Vote %': electoral_percentage,
+                                  'Popular Vote': popular_vote,
+                                  'Popular Vote %': popular_percentage,
+                                  'Winner': winner})
     
     all_election_data.append({
         'Year': url.split('/')[-1],
@@ -57,4 +53,4 @@ for url in urls:
 with open('election_web_scrapping.json', 'w') as json_file:
     json.dump(all_election_data, json_file, indent=4)
 
-print("data has been exported to 'election_web_scrapping.json'.")
+print("Data has been exported to 'election_web_scrapping.json'.")
