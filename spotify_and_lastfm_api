@@ -1,0 +1,79 @@
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+import requests
+import json
+import re
+
+SPOTIFY_KEY = '011ff97eece74fe69955a1c7ddc10f5a' # Spotify API Key
+SPOTIFY_ID = 'e22c08246ed64f6f99e97680afcea6d0' # Spotify Client Key
+LASTFM_KEY = '130b112dfde86ea44d6ea0bfa51aa476'  # Last.fm API Key
+
+spotify_client_credentials = SpotifyClientCredentials(client_id = SPOTIFY_KEY, client_secret = SPOTIFY_ID)
+sp = spotipy.Spotify(client_credentials_manager = spotify_client_credentials)
+
+# playlists being used to collect top 50 hits from each year
+playlist_ids = {'2024': '774kUuKDzLa8ieaSmi8IfS',
+                '2020': '2fmTTbBkXi8pewbUvG3CeZ',
+                '2016': '0MvxEHiGaSFsKXry6Vjvb1',
+                '2012': '0rZUzeYjHNvHQhgMkq5C9W'}
+
+def get_tracks_from_playlist(playlist_id):
+    results = sp.playlist_tracks(playlist_id, limit = 50)
+    tracks_info = []
+
+    for track in results['items']:
+        track_details = track['track']
+        track_info = get_track_details(track_details['id'], track_details['artists'])
+        tracks_info.append(track_info)
+    
+    return tracks_info
+
+# get information about a track using Spotify API
+def get_track_details(track_id, artists):
+    track = sp.track(track_id)
+    genres = []
+    
+    # get each artist
+    for artist in artists:
+        artist_name = artist['name']
+        try:
+            # get artist info and the first genre from Last.fm API
+            url = f'http://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist={artist_name}&api_key={LASTFM_KEY}&format=json'
+            response = requests.get(url, timeout = 30)
+            data = response.json()
+            if 'artist' in data and 'tags' in data['artist']:
+                genres.extend([tag['name'] for tag in data['artist']['tags']['tag']])
+        except:
+            genres.append('unknown genre')
+    
+    # where no genres were found, insert 'unknown genre'
+    #if not genres:
+    #    genres.append('unknown genre')
+
+    # organize track info into dict
+    track_info = {'track_name': track['name'],
+                  'artists': [artist['name'] for artist in track['artists']],
+                  'genre': genres[0],
+                  'album': track['album']['name'],
+                  'release_date': track['album']['release_date'],
+                  'popularity': track['popularity']}
+
+    return track_info
+
+# export data by year to .json files
+def get_and_export_data_by_year(year, playlist_id):
+    tracks_info = get_tracks_from_playlist(playlist_id)
+    year_data = {
+        year: tracks_info
+    }
+
+    with open(f'{year}_top_songs.json', 'w', encoding='utf-8') as json_file:
+        json.dump(year_data, json_file, ensure_ascii=False, indent=4)
+    print(f"Data for {year} has been exported to {year}_top_songs.json")
+
+# main
+def process_all_years():
+    for year, playlist_id in playlist_ids.items():
+        get_and_export_data_by_year(year, playlist_id)
+
+process_all_years()
