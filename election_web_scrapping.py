@@ -53,4 +53,4 @@ for url in urls:
 with open('election_web_scrapping.json', 'w') as json_file:
     json.dump(all_election_data, json_file, indent=4)
 
-print("Data has been exported to 'election_web_scrapping.json'.")
+print("Data has been exported to 'election_web_scrapping.json'")
