@@ -74,7 +74,40 @@ for election in election_data:
                                       (year, party, presidential_nominee, vice_presidential_nominee, electoral_vote, 
                                       electoral_vote_percentage, popular_vote, popular_vote_percentage, winner))
 
+# MIA'S CODE
+
+# create box_office_movies table
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS box_office_movies (
+    genre TEXT,
+    year INTEGER,
+    title TEXT,
+    revenue INTEGER
+)
+''')
+
+# clear existing data to avoid duplicates
+cursor.execute("DELETE FROM box_office_movies")
+
+# insert movie data from cache_tmdb.json
+with open('cache_tmdb.json', 'r') as f:
+    movie_data = json.load(f)
+
+for key, movie in movie_data.items():
+    if movie:  # skip None entries
+        genre, year = key.rsplit("-", 1)
+        title = movie.get("title", "")
+        revenue = movie.get("revenue", 0)
+
+        cursor.execute('''
+            INSERT INTO box_office_movies (genre, year, title, revenue)
+            VALUES (?, ?, ?, ?)
+        ''', (genre, int(year), title, revenue))
+
+
+
+
 conn.commit()
 conn.close()
 
-print("Data from music and election JSON files has been inserted into SQLite.")
+print("Data from music and election and movie JSON files has been inserted into SQLite.")
