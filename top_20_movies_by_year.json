@@ -3,510 +3,610 @@
         {
             "title": "Inside Out 2",
             "year": "2024",
-            "revenue": 1698863816
+            "revenue": 1698863816,
+            "genre": "Animation"
         },
         {
             "title": "Deadpool & Wolverine",
             "year": "2024",
-            "revenue": 1338073645
+            "revenue": 1338073645,
+            "genre": "Action"
         },
         {
             "title": "Moana 2",
             "year": "2024",
-            "revenue": 1059544057
+            "revenue": 1059544057,
+            "genre": "Animation"
         },
         {
             "title": "Despicable Me 4",
             "year": "2024",
-            "revenue": 969280910
+            "revenue": 969280910,
+            "genre": "Animation"
         },
         {
             "title": "Wicked",
             "year": "2024",
-            "revenue": 747289164
+            "revenue": 747289164,
+            "genre": "Drama"
         },
         {
             "title": "Mufasa: The Lion King",
             "year": "2024",
-            "revenue": 721046090
+            "revenue": 721046090,
+            "genre": "Adventure"
         },
         {
             "title": "Dune: Part Two",
             "year": "2024",
-            "revenue": 714444358
+            "revenue": 714444358,
+            "genre": "Science Fiction"
         },
         {
             "title": "Godzilla x Kong: The New Empire",
             "year": "2024",
-            "revenue": 571750016
+            "revenue": 571750016,
+            "genre": "Action"
         },
         {
             "title": "Kung Fu Panda 4",
             "year": "2024",
-            "revenue": 548040835
+            "revenue": 548040835,
+            "genre": "Animation"
         },
         {
             "title": "Sonic the Hedgehog 3",
             "year": "2024",
-            "revenue": 486018457
+            "revenue": 486018457,
+            "genre": "Action"
         },
         {
             "title": "Yolo",
             "year": "2024",
-            "revenue": 480600000
+            "revenue": 480600000,
+            "genre": "Drama"
         },
         {
             "title": "Venom: The Last Dance",
             "year": "2024",
-            "revenue": 478103649
+            "revenue": 478103649,
+            "genre": "Action"
         },
         {
             "title": "Successor",
             "year": "2024",
-            "revenue": 473859800
+            "revenue": 473859800,
+            "genre": "Comedy"
         },
         {
             "title": "Pegasus 2",
             "year": "2024",
-            "revenue": 468924000
+            "revenue": 468924000,
+            "genre": "Drama"
         },
         {
             "title": "Gladiator II",
             "year": "2024",
-            "revenue": 458718000
+            "revenue": 458718000,
+            "genre": "Action"
         },
         {
             "title": "Beetlejuice Beetlejuice",
             "year": "2024",
-            "revenue": 451100435
+            "revenue": 451100435,
+            "genre": "Horror"
         },
         {
             "title": "Bad Boys: Ride or Die",
             "year": "2024",
-            "revenue": 404547819
+            "revenue": 404547819,
+            "genre": "Action"
         },
         {
             "title": "Kingdom of the Planet of the Apes",
             "year": "2024",
-            "revenue": 397378150
+            "revenue": 397378150,
+            "genre": "Science Fiction"
         },
         {
             "title": "Twisters",
             "year": "2024",
-            "revenue": 370962265
+            "revenue": 370962265,
+            "genre": "Action"
         },
         {
             "title": "It Ends with Us",
             "year": "2024",
-            "revenue": 350993761
+            "revenue": 350993761,
+            "genre": "Drama"
         }
     ],
     "2020": [
         {
             "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
             "year": "2020",
-            "revenue": 507119058
+            "revenue": 507119058,
+            "genre": "Animation"
         },
         {
             "title": "The Eight Hundred",
             "year": "2020",
-            "revenue": 461421559
+            "revenue": 461421559,
+            "genre": "War"
         },
         {
             "title": "Metallica: WorldWired Tour - Live in Manchester, England - June 18, 2019",
             "year": "2020",
-            "revenue": 426900000
+            "revenue": 426900000,
+            "genre": "Music"
         },
         {
             "title": "Bad Boys for Life",
             "year": "2020",
-            "revenue": 426505244
+            "revenue": 426505244,
+            "genre": "Thriller"
         },
         {
             "title": "Tenet",
             "year": "2020",
-            "revenue": 365304105
+            "revenue": 365304105,
+            "genre": "Action"
         },
         {
             "title": "Sonic the Hedgehog",
             "year": "2020",
-            "revenue": 319715683
+            "revenue": 319715683,
+            "genre": "Action"
         },
         {
             "title": "Dolittle",
             "year": "2020",
-            "revenue": 251410631
+            "revenue": 251410631,
+            "genre": "Family"
         },
         {
             "title": "Nidja's Kitchen 2",
             "year": "2020",
-            "revenue": 250000000
+            "revenue": 250000000,
+            "genre": "Comedy"
         },
         {
             "title": "Jiang Ziya",
             "year": "2020",
-            "revenue": 240656068
+            "revenue": 240656068,
+            "genre": "Animation"
         },
         {
             "title": "Shock Wave 2",
             "year": "2020",
-            "revenue": 226400000
+            "revenue": 226400000,
+            "genre": "Action"
         },
         {
             "title": "A Little Red Flower",
             "year": "2020",
-            "revenue": 216000000
+            "revenue": 216000000,
+            "genre": "Drama"
         },
         {
             "title": "The Croods: A New Age",
             "year": "2020",
-            "revenue": 215905815
+            "revenue": 215905815,
+            "genre": "Animation"
         },
         {
             "title": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
             "year": "2020",
-            "revenue": 205537933
+            "revenue": 205537933,
+            "genre": "Action"
         },
         {
             "title": "Wonder Woman 1984",
             "year": "2020",
-            "revenue": 169601036
+            "revenue": 169601036,
+            "genre": "Action"
         },
         {
             "title": "Sacrifice",
             "year": "2020",
-            "revenue": 161047608
+            "revenue": 161047608,
+            "genre": "War"
         },
         {
             "title": "The Invisible Man",
             "year": "2020",
-            "revenue": 144492724
+            "revenue": 144492724,
+            "genre": "Thriller"
         },
         {
             "title": "Onward",
             "year": "2020",
-            "revenue": 141940042
+            "revenue": 141940042,
+            "genre": "Family"
         },
         {
             "title": "Soul",
             "year": "2020",
-            "revenue": 121977511
+            "revenue": 121977511,
+            "genre": "Animation"
         },
         {
             "title": "The Gentlemen",
             "year": "2020",
-            "revenue": 115171795
+            "revenue": 115171795,
+            "genre": "Action"
         },
         {
             "title": "The Call of the Wild",
             "year": "2020",
-            "revenue": 111200000
+            "revenue": 111200000,
+            "genre": "Adventure"
         }
     ],
     "2016": [
         {
             "title": "Captain America: Civil War",
             "year": "2016",
-            "revenue": 1155046416
+            "revenue": 1155046416,
+            "genre": "Adventure"
         },
         {
             "title": "Rogue One: A Star Wars Story",
             "year": "2016",
-            "revenue": 1056057273
+            "revenue": 1056057273,
+            "genre": "Action"
         },
         {
             "title": "Finding Dory",
             "year": "2016",
-            "revenue": 1028600000
+            "revenue": 1028600000,
+            "genre": "Adventure"
         },
         {
             "title": "Zootopia",
             "year": "2016",
-            "revenue": 1023784195
+            "revenue": 1023784195,
+            "genre": "Animation"
         },
         {
             "title": "The Jungle Book",
             "year": "2016",
-            "revenue": 966550600
+            "revenue": 966550600,
+            "genre": "Family"
         },
         {
             "title": "The Secret Life of Pets",
             "year": "2016",
-            "revenue": 875457937
+            "revenue": 875457937,
+            "genre": "Adventure"
         },
         {
             "title": "Batman v Superman: Dawn of Justice",
             "year": "2016",
-            "revenue": 874362803
+            "revenue": 874362803,
+            "genre": "Action"
         },
         {
             "title": "Fantastic Beasts and Where to Find Them",
             "year": "2016",
-            "revenue": 809342332
+            "revenue": 809342332,
+            "genre": "Fantasy"
         },
         {
             "title": "Deadpool",
             "year": "2016",
-            "revenue": 782837347
+            "revenue": 782837347,
+            "genre": "Action"
         },
         {
             "title": "Suicide Squad",
             "year": "2016",
-            "revenue": 749200054
+            "revenue": 749200054,
+            "genre": "Action"
         },
         {
             "title": "Moana",
             "year": "2016",
-            "revenue": 690860472
+            "revenue": 690860472,
+            "genre": "Adventure"
         },
         {
             "title": "Doctor Strange",
             "year": "2016",
-            "revenue": 676343174
+            "revenue": 676343174,
+            "genre": "Action"
         },
         {
             "title": "Sing",
             "year": "2016",
-            "revenue": 634151679
+            "revenue": 634151679,
+            "genre": "Animation"
         },
         {
             "title": "The Mermaid",
             "year": "2016",
-            "revenue": 553810228
+            "revenue": 553810228,
+            "genre": "Comedy"
         },
         {
             "title": "X-Men: Apocalypse",
             "year": "2016",
-            "revenue": 543934787
+            "revenue": 543934787,
+            "genre": "Action"
         },
         {
             "title": "Kung Fu Panda 3",
             "year": "2016",
-            "revenue": 521170825
+            "revenue": 521170825,
+            "genre": "Action"
         },
         {
             "title": "La La Land",
             "year": "2016",
-            "revenue": 509183536
+            "revenue": 509183536,
+            "genre": "Comedy"
         },
         {
             "title": "Warcraft",
             "year": "2016",
-            "revenue": 433677183
+            "revenue": 433677183,
+            "genre": "Action"
         },
         {
             "title": "Jason Bourne",
             "year": "2016",
-            "revenue": 415484914
+            "revenue": 415484914,
+            "genre": "Action"
         },
         {
             "title": "Ice Age: Collision Course",
             "year": "2016",
-            "revenue": 408579038
+            "revenue": 408579038,
+            "genre": "Adventure"
         }
     ],
     "2012": [
         {
             "title": "The Avengers",
             "year": "2012",
-            "revenue": 1518815515
+            "revenue": 1518815515,
+            "genre": "Science Fiction"
         },
         {
             "title": "Skyfall",
             "year": "2012",
-            "revenue": 1108594176
+            "revenue": 1108594176,
+            "genre": "Action"
         },
         {
             "title": "The Dark Knight Rises",
             "year": "2012",
-            "revenue": 1081041287
+            "revenue": 1081041287,
+            "genre": "Action"
         },
         {
             "title": "The Hobbit: An Unexpected Journey",
             "year": "2012",
-            "revenue": 1021103568
+            "revenue": 1021103568,
+            "genre": "Adventure"
         },
         {
             "title": "Ice Age: Continental Drift",
             "year": "2012",
-            "revenue": 877244782
+            "revenue": 877244782,
+            "genre": "Animation"
         },
         {
             "title": "The Twilight Saga: Breaking Dawn - Part 2",
             "year": "2012",
-            "revenue": 829747654
+            "revenue": 829747654,
+            "genre": "Adventure"
         },
         {
             "title": "The Amazing Spider-Man",
             "year": "2012",
-            "revenue": 757930663
+            "revenue": 757930663,
+            "genre": "Action"
         },
         {
             "title": "Madagascar 3: Europe's Most Wanted",
             "year": "2012",
-            "revenue": 746921274
+            "revenue": 746921274,
+            "genre": "Animation"
         },
         {
             "title": "The Hunger Games",
             "year": "2012",
-            "revenue": 694394724
+            "revenue": 694394724,
+            "genre": "Science Fiction"
         },
         {
             "title": "Men in Black 3",
             "year": "2012",
-            "revenue": 624000000
+            "revenue": 624000000,
+            "genre": "Action"
         },
         {
             "title": "Life of Pi",
             "year": "2012",
-            "revenue": 609016565
+            "revenue": 609016565,
+            "genre": "Adventure"
         },
         {
             "title": "Ted",
             "year": "2012",
-            "revenue": 549368315
+            "revenue": 549368315,
+            "genre": "Comedy"
         },
         {
             "title": "Brave",
             "year": "2012",
-            "revenue": 539000000
+            "revenue": 539000000,
+            "genre": "Animation"
         },
         {
             "title": "Wreck-It Ralph",
             "year": "2012",
-            "revenue": 471222889
+            "revenue": 471222889,
+            "genre": "Family"
         },
         {
             "title": "Les Mis\u00e9rables",
             "year": "2012",
-            "revenue": 442636309
+            "revenue": 442636309,
+            "genre": "History"
         },
         {
             "title": "Django Unchained",
             "year": "2012",
-            "revenue": 425368238
+            "revenue": 425368238,
+            "genre": "Drama"
         },
         {
             "title": "Prometheus",
             "year": "2012",
-            "revenue": 403354469
+            "revenue": 403354469,
+            "genre": "Science Fiction"
         },
         {
             "title": "Snow White and the Huntsman",
             "year": "2012",
-            "revenue": 396600000
+            "revenue": 396600000,
+            "genre": "Adventure"
         },
         {
             "title": "Taken 2",
             "year": "2012",
-            "revenue": 376100000
+            "revenue": 376100000,
+            "genre": "Action"
         },
         {
             "title": "Hotel Transylvania",
             "year": "2012",
-            "revenue": 358375603
+            "revenue": 358375603,
+            "genre": "Animation"
         }
     ],
     "2008": [
         {
             "title": "The Dark Knight",
             "year": "2008",
-            "revenue": 1004558444
+            "revenue": 1004558444,
+            "genre": "Drama"
         },
         {
             "title": "Indiana Jones and the Kingdom of the Crystal Skull",
             "year": "2008",
-            "revenue": 786636033
+            "revenue": 786636033,
+            "genre": "Adventure"
         },
         {
             "title": "Kung Fu Panda",
             "year": "2008",
-            "revenue": 632091832
+            "revenue": 632091832,
+            "genre": "Action"
         },
         {
             "title": "Hancock",
             "year": "2008",
-            "revenue": 629400000
+            "revenue": 629400000,
+            "genre": "Fantasy"
         },
         {
             "title": "Mamma Mia!",
             "year": "2008",
-            "revenue": 609841637
+            "revenue": 609841637,
+            "genre": "Comedy"
         },
         {
             "title": "Madagascar: Escape 2 Africa",
             "year": "2008",
-            "revenue": 603900354
+            "revenue": 603900354,
+            "genre": "Family"
         },
         {
             "title": "Quantum of Solace",
             "year": "2008",
-            "revenue": 589593688
+            "revenue": 589593688,
+            "genre": "Adventure"
         },
         {
             "title": "Iron Man",
             "year": "2008",
-            "revenue": 585174222
+            "revenue": 585174222,
+            "genre": "Action"
         },
         {
             "title": "WALL\u00b7E",
             "year": "2008",
-            "revenue": 521311860
+            "revenue": 521311860,
+            "genre": "Animation"
         },
         {
             "title": "The Chronicles of Narnia: Prince Caspian",
             "year": "2008",
-            "revenue": 419665568
+            "revenue": 419665568,
+            "genre": "Adventure"
         },
         {
             "title": "Sex and the City",
             "year": "2008",
-            "revenue": 418800000
+            "revenue": 418800000,
+            "genre": "Comedy"
         },
         {
             "title": "The Mummy: Tomb of the Dragon Emperor",
             "year": "2008",
-            "revenue": 403449830
+            "revenue": 403449830,
+            "genre": "Adventure"
         },
         {
             "title": "Twilight",
             "year": "2008",
-            "revenue": 393616788
+            "revenue": 393616788,
+            "genre": "Fantasy"
         },
         {
             "title": "Slumdog Millionaire",
             "year": "2008",
-            "revenue": 378400000
+            "revenue": 378400000,
+            "genre": "Drama"
         },
         {
             "title": "Wanted",
             "year": "2008",
-            "revenue": 342463063
+            "revenue": 342463063,
+            "genre": "Action"
         },
         {
             "title": "The Curious Case of Benjamin Button",
             "year": "2008",
-            "revenue": 335800000
+            "revenue": 335800000,
+            "genre": "Drama"
         },
         {
             "title": "Bolt",
             "year": "2008",
-            "revenue": 309979994
+            "revenue": 309979994,
+            "genre": "Animation"
         },
         {
             "title": "Horton Hears a Who!",
             "year": "2008",
-            "revenue": 298572799
+            "revenue": 298572799,
+            "genre": "Animation"
         },
         {
             "title": "Gran Torino",
             "year": "2008",
-            "revenue": 270000000
+            "revenue": 270000000,
+            "genre": "Drama"
         },
         {
             "title": "10,000 BC",
             "year": "2008",
-            "revenue": 269784201
+            "revenue": 269784201,
+            "genre": "Adventure"
         }
     ]
 }

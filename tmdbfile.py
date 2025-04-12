@@ -98,11 +98,10 @@ def update_cache():
                 save_cache(cache, CACHE_FILE)
     return cache
 
-
-def get_top_movies_overall(years, top_n=50):
+def get_top_movies_overall(years, top_n=20):
     all_top_movies = {}
     for year in years:
-        print(f"Fetching top {top_n} movies for {year}...")
+        print(f"Fetching top 20 movies for {year}...")
         url = "https://api.themoviedb.org/3/discover/movie"
         params = {
             "api_key": API_KEY,
@@ -118,18 +117,21 @@ def get_top_movies_overall(years, top_n=50):
                 details = get_movie_details(movie['id'])
                 if details:
                     year_movies.append({
-                        "title": details.get("title"),
-                        "year": details.get("release_date", '')[:4],
-                        "revenue": details.get("revenue")
-                    })
+                    "title": details.get("title"),
+                    "year": details.get("release_date", '')[:4],
+                    "revenue": details.get("revenue"),
+                    "genre": details.get("genres", [{}])[0].get("name") if details.get("genres") else None
+                })
             all_top_movies[str(year)] = year_movies
         else:
             print(f"Failed to fetch top movies for {year}")
 
-    with open("top_50_movies_by_year.json", "w") as f:
+    with open("top_20_movies_by_year.json", "w") as f:
         json.dump(all_top_movies, f, indent=4)
 
-    print("Top 50 movies by year saved to top_50_movies_by_year.json")
+    print("Top 20 movies by year saved to top_20_movies_by_year.json")
+
+
 
 def main():
     cache = update_cache()
