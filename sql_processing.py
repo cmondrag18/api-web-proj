@@ -104,7 +104,30 @@ for key, movie in movie_data.items():
             VALUES (?, ?, ?, ?)
         ''', (genre, int(year), title, revenue))
 
+# create top_grossing_movies table
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS top_grossing_movies (
+    year INTEGER,
+    title TEXT,
+    revenue INTEGER
+)
+''')
 
+# clear existing data to avoid duplicates
+cursor.execute("DELETE FROM top_grossing_movies")
+
+# insert data from top_50_movies_by_year.json
+with open('top_50_movies_by_year.json', 'r') as f:
+    top_movies = json.load(f)
+
+for year, movies in top_movies.items():
+    for movie in movies:
+        title = movie.get("title", "")
+        revenue = movie.get("revenue", 0)
+        cursor.execute('''
+            INSERT INTO top_grossing_movies (year, title, revenue)
+            VALUES (?, ?, ?)
+        ''', (int(year), title, revenue))
 
 
 conn.commit()
