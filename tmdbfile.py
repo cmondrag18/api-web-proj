@@ -1,8 +1,12 @@
+# TMDb Box Office Project for Election Years
+# Author: Mia Goldstein
+# Project Objective: Find the highest box office earnings for movies in specified genres during election years using TMDb API
+
 import requests
 import json
 import os
 
-API_KEY = 'd7310332d3cce9353cbd1ed056aa7e1e'
+API_KEY = 'd7310332d3cce9353cbd1ed056aa7e1e'  # Replace with your actual TMDb API key
 CACHE_FILE = 'cache_tmdb.json'
 
 ELECTION_YEARS = [2024, 2020, 2016, 2012, 2008, 2021, 2017, 2013, 2009]
@@ -11,7 +15,7 @@ GENRES = {
     'Romance': 10749,
     'Drama': 18,
     'Comedy': 35,
-    'Documentary': 99,
+    'Documentary': 99
 }
 
 
@@ -29,6 +33,7 @@ def save_cache(cache, filename):
             json.dump(cache, f, indent=4)
     except:
         print("Error saving cache.")
+
 
 def fetch_genre_ids():
     url = "https://api.themoviedb.org/3/genre/movie/list"
@@ -50,7 +55,7 @@ def discover_movies_by_genre_year(genre_id, year):
         "with_genres": genre_id,
         "primary_release_year": year,
         "sort_by": "revenue.desc",
-        "page": 1  # limit to first page 
+        "page": 1  # limit to first page (usually 20 results)
     }
     response = requests.get(url, params=params)
     if response.status_code == 200:
@@ -94,6 +99,38 @@ def update_cache():
     return cache
 
 
+def get_top_movies_overall(years, top_n=50):
+    all_top_movies = {}
+    for year in years:
+        print(f"Fetching top {top_n} movies for {year}...")
+        url = "https://api.themoviedb.org/3/discover/movie"
+        params = {
+            "api_key": API_KEY,
+            "primary_release_year": year,
+            "sort_by": "revenue.desc",
+            "page": 1
+        }
+        response = requests.get(url, params=params)
+        if response.status_code == 200:
+            results = response.json().get("results", [])[:top_n]
+            year_movies = []
+            for movie in results:
+                details = get_movie_details(movie['id'])
+                if details:
+                    year_movies.append({
+                        "title": details.get("title"),
+                        "year": details.get("release_date", '')[:4],
+                        "revenue": details.get("revenue")
+                    })
+            all_top_movies[str(year)] = year_movies
+        else:
+            print(f"Failed to fetch top movies for {year}")
+
+    with open("top_50_movies_by_year.json", "w") as f:
+        json.dump(all_top_movies, f, indent=4)
+
+    print("Top 50 movies by year saved to top_50_movies_by_year.json")
+
 def main():
     cache = update_cache()
     for genre_name in GENRES:
@@ -108,3 +145,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    get_top_movies_overall([2024, 2020, 2016, 2012, 2008])
