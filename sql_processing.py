@@ -1,9 +1,11 @@
 import json
 import sqlite3
+from datetime import datetime
+import pandas as pd
 
 json_files = ['2024_top_songs.json', '2020_top_songs.json', '2016_top_songs.json', '2012_top_songs.json']
 
-conn = sqlite3.connect('music_election.db')
+conn = sqlite3.connect('sql_processing.db')
 cursor = conn.cursor()
 
 # create music table
@@ -18,6 +20,9 @@ CREATE TABLE IF NOT EXISTS tracks (
     year INTEGER
 )
 ''')
+
+# clear existing data to avoid duplicates in tracks table
+cursor.execute("DELETE FROM tracks")
 
 # insert music data
 for json_file in json_files:
@@ -51,6 +56,9 @@ CREATE TABLE IF NOT EXISTS election_results (
     winner TEXT
 )
 ''')
+
+# clear existing data to avoid duplicates in election_results table
+cursor.execute("DELETE FROM election_results")
 
 # insert election data
 with open('election_web_scrapping.json', 'r') as f:
@@ -86,7 +94,7 @@ CREATE TABLE IF NOT EXISTS box_office_movies (
 )
 ''')
 
-# clear existing data to avoid duplicates
+# clear existing data to avoid duplicates in box_office_movies table
 cursor.execute("DELETE FROM box_office_movies")
 
 # insert movie data from cache_tmdb.json
@@ -130,8 +138,73 @@ for year, movies in top_movies.items():
             VALUES (?, ?, ?, ?)
         ''', (int(year), title, genre, revenue))
 
+# create the 'music_election' table: outer join between 'tracks' and 'election_results' on 'year'
+cursor.execute("DROP TABLE IF EXISTS music_election")  # drop if already exists
+cursor.execute('''
+CREATE TABLE music_election AS
+SELECT 
+    t.year,
+    t.track_name AS title,
+    t.genre,
+    t.popularity AS revenue,
+    e.party,
+    e.presidential_nominee,
+    e.vice_presidential_nominee,
+    e.electoral_vote,
+    e.electoral_vote_percentage,
+    e.popular_vote,
+    e.popular_vote_percentage,
+    e.winner,
+    t.release_date  -- Explicitly include release_date here
+FROM tracks t
+LEFT OUTER JOIN election_results e ON t.year = e.year
+ORDER BY t.year;
+''')
+
+# create the 'movie_election' table: outer join between 'top_grossing_movies' and 'election_results' on 'year'
+cursor.execute("DROP TABLE IF EXISTS movie_election")  # drop if already exists
+cursor.execute('''
+CREATE TABLE movie_election AS
+SELECT 
+    m.year,
+    m.title,
+    m.genre,
+    m.revenue,
+    e.party,
+    e.presidential_nominee,
+    e.vice_presidential_nominee,
+    e.electoral_vote,
+    e.electoral_vote_percentage,
+    e.popular_vote,
+    e.popular_vote_percentage,
+    e.winner
+FROM top_grossing_movies m
+LEFT OUTER JOIN election_results e ON m.year = e.year
+ORDER BY m.year;
+''')
+
+# select release date and year from tracks table
+query = '''
+SELECT release_date, year
+FROM tracks
+'''
+
+df = pd.read_sql_query(query, conn)
+
+# release_date is in datetime format (YYYY-MM-DD), extract the month and year
+df['release_date'] = pd.to_datetime(df['release_date'], format='%Y-%m-%d', errors='coerce')
+df['month'] = df['release_date'].dt.month
+df['year'] = df['year'].astype(int)
+
+# count the occurrences of songs by year and month
+song_counts = df.groupby(['year', 'month']).size().reset_index(name='song_count')
+output_file_path = 'song_counts_by_month_and_year.txt'  # Update with your desired path
+with open(output_file_path, 'w') as f:
+    for index, row in song_counts.iterrows():
+        f.write(f"Year: {row['year']}, Month: {row['month']}, Song Count: {row['song_count']}\n")
+
 
 conn.commit()
 conn.close()
 
-print("Data from music and election and movie JSON files has been inserted into SQLite.")
+print("Data has been successfully gathered and processed")
