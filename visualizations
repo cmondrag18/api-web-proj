@@ -17,12 +17,20 @@ category_order = [
     "Joe Biden (2020)",
     "Donald Trump (2024)"
 ]
-winner_df['presidential_nominee'] = winner_df['presidential_nominee'].replace({
+
+winner_df.loc[:, 'presidential_nominee'] = winner_df['presidential_nominee'].replace({
     "Barack Obama": "Barack Obama (2012)",
     "Donald Trump": "Donald Trump (2016)",
     "Joseph R. Biden": "Joe Biden (2020)",
     "Donald J. Trump": "Donald Trump (2024)"
 })
+
+# winner_df['presidential_nominee'] = winner_df['presidential_nominee'].replace({
+#     "Barack Obama": "Barack Obama (2012)",
+#     "Donald Trump": "Donald Trump (2016)",
+#     "Joseph R. Biden": "Joe Biden (2020)",
+#     "Donald J. Trump": "Donald Trump (2024)"
+# })
 
 # boxplot for the popularity of songs based on the candidate that won
 plt.figure(figsize=(10, 6))
@@ -40,6 +48,6 @@ plt.show()
 
 ################################
 
-# Insert Mia's code
+# MIA'S CODE
 
 ################################
