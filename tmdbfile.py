@@ -1,12 +1,8 @@
-# TMDb Box Office Project for Election Years
-# Author: Mia Goldstein
-# Project Objective: Find the highest box office earnings for movies in specified genres during election years using TMDb API
-
 import requests
 import json
 import os
 
-API_KEY = 'd7310332d3cce9353cbd1ed056aa7e1e'  # Replace with your actual TMDb API key
+API_KEY = 'd7310332d3cce9353cbd1ed056aa7e1e' 
 CACHE_FILE = 'cache_tmdb.json'
 
 ELECTION_YEARS = [2024, 2020, 2016, 2012, 2008, 2021, 2017, 2013, 2009]
