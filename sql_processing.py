@@ -146,7 +146,7 @@ SELECT
     t.year,
     t.track_name AS title,
     t.genre,
-    t.popularity AS revenue,
+    t.popularity AS popularity,
     e.party,
     e.presidential_nominee,
     e.vice_presidential_nominee,

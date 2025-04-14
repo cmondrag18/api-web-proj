@@ -1,0 +1,45 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import sqlite3
+
+db = 'sql_processing.db'
+conn = sqlite3.connect(db)
+
+query = "SELECT * FROM music_election"
+df = pd.read_sql(query, conn)
+
+# filter the data for rows where 'winner' is 'Yes'
+winner_df = df[df['winner'] == 'Yes']
+
+category_order = [
+    "Barack Obama (2012)",
+    "Donald Trump (2016)",
+    "Joe Biden (2020)",
+    "Donald Trump (2024)"
+]
+winner_df['presidential_nominee'] = winner_df['presidential_nominee'].replace({
+    "Barack Obama": "Barack Obama (2012)",
+    "Donald Trump": "Donald Trump (2016)",
+    "Joseph R. Biden": "Joe Biden (2020)",
+    "Donald J. Trump": "Donald Trump (2024)"
+})
+
+# boxplot for the popularity of songs based on the candidate that won
+plt.figure(figsize=(10, 6))
+winner_df.boxplot(column='popularity', by='presidential_nominee', grid=False)
+plt.title('Boxplot of Song Popularity by Winning Candidate')
+plt.suptitle('')
+plt.xlabel('Presidential Nominee')
+plt.ylabel('Song Popularity')
+plt.xticks(rotation=45)
+plt.show()
+
+################################
+
+# Insert Dash's code
+
+################################
+
+# Insert Mia's code
+
+################################
