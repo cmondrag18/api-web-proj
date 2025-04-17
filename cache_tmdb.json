@@ -1,227 +1,527 @@
 {
-    "Sci-Fi-2024": {
-        "title": "Deadpool & Wolverine",
-        "year": "2024",
-        "revenue": 1338073645
-    },
-    "Sci-Fi-2020": {
-        "title": "Tenet",
-        "year": "2020",
-        "revenue": 365304105
-    },
-    "Sci-Fi-2016": {
-        "title": "Captain America: Civil War",
-        "year": "2016",
-        "revenue": 1155046416
-    },
-    "Sci-Fi-2012": {
-        "title": "The Avengers",
-        "year": "2012",
-        "revenue": 1518815515
+    "Sci-Fi-2007": {
+        "title": "Spider-Man 3",
+        "year": "2007",
+        "revenue": 894983373
     },
     "Sci-Fi-2008": {
         "title": "Iron Man",
         "year": "2008",
         "revenue": 585174222
     },
-    "Sci-Fi-2021": {
-        "title": "Spider-Man: No Way Home",
-        "year": "2021",
-        "revenue": 1921847111
+    "Sci-Fi-2009": {
+        "title": "Avatar",
+        "year": "2009",
+        "revenue": 2923706026
     },
-    "Sci-Fi-2017": {
-        "title": "Star Wars: The Last Jedi",
-        "year": "2017",
-        "revenue": 1332698830
+    "Sci-Fi-2011": {
+        "title": "Transformers: Dark of the Moon",
+        "year": "2011",
+        "revenue": 1123794079
+    },
+    "Sci-Fi-2012": {
+        "title": "The Avengers",
+        "year": "2012",
+        "revenue": 1518815515
     },
     "Sci-Fi-2013": {
         "title": "Iron Man 3",
         "year": "2013",
         "revenue": 1215577205
     },
-    "Sci-Fi-2009": {
-        "title": "Avatar",
-        "year": "2009",
-        "revenue": 2923706026
+    "Sci-Fi-2015": {
+        "title": "Star Wars: The Force Awakens",
+        "year": "2015",
+        "revenue": 2068223624
     },
-    "Romance-2024": {
-        "title": "Wicked",
-        "year": "2024",
-        "revenue": 747289164
-    },
-    "Romance-2020": {
-        "title": "After We Collided",
-        "year": "2020",
-        "revenue": 47990414
-    },
-    "Romance-2016": {
-        "title": "The Mermaid",
+    "Sci-Fi-2016": {
+        "title": "Captain America: Civil War",
         "year": "2016",
-        "revenue": 553810228
+        "revenue": 1155046416
     },
-    "Romance-2012": {
-        "title": "The Twilight Saga: Breaking Dawn - Part 2",
-        "year": "2012",
-        "revenue": 829747654
+    "Sci-Fi-2017": {
+        "title": "Star Wars: The Last Jedi",
+        "year": "2017",
+        "revenue": 1332698830
+    },
+    "Sci-Fi-2019": {
+        "title": "Avengers: Endgame",
+        "year": "2019",
+        "revenue": 2799439100
+    },
+    "Sci-Fi-2020": {
+        "title": "Tenet",
+        "year": "2020",
+        "revenue": 365304105
+    },
+    "Sci-Fi-2021": {
+        "title": "Spider-Man: No Way Home",
+        "year": "2021",
+        "revenue": 1921847111
+    },
+    "Sci-Fi-2023": {
+        "title": "Guardians of the Galaxy Vol. 3",
+        "year": "2023",
+        "revenue": 845600000
+    },
+    "Sci-Fi-2024": {
+        "title": "Deadpool & Wolverine",
+        "year": "2024",
+        "revenue": 1338073645
+    },
+    "Sci-Fi-2025": {
+        "title": "Captain America: Brave New World",
+        "year": "2025",
+        "revenue": 411409721
+    },
+    "Romance-2007": {
+        "title": "Enchanted",
+        "year": "2007",
+        "revenue": 340487652
     },
     "Romance-2008": {
         "title": "Mamma Mia!",
         "year": "2008",
         "revenue": 609841637
     },
-    "Romance-2021": {
-        "title": "My Love",
-        "year": "2021",
-        "revenue": 114000000
+    "Romance-2009": {
+        "title": "The Twilight Saga: New Moon",
+        "year": "2009",
+        "revenue": 709827462
     },
-    "Romance-2017": {
-        "title": "Beauty and the Beast",
-        "year": "2017",
-        "revenue": 1266115964
+    "Romance-2011": {
+        "title": "The Twilight Saga: Breaking Dawn - Part 1",
+        "year": "2011",
+        "revenue": 712171856
+    },
+    "Romance-2012": {
+        "title": "The Twilight Saga: Breaking Dawn - Part 2",
+        "year": "2012",
+        "revenue": 829747654
     },
     "Romance-2013": {
         "title": "The Great Gatsby",
         "year": "2013",
         "revenue": 351040419
     },
-    "Romance-2009": {
-        "title": "The Twilight Saga: New Moon",
-        "year": "2009",
-        "revenue": 709827462
+    "Romance-2015": {
+        "title": "Fifty Shades of Grey",
+        "year": "2015",
+        "revenue": 569651467
     },
-    "Drama-2024": {
+    "Romance-2016": {
+        "title": "The Mermaid",
+        "year": "2016",
+        "revenue": 553810228
+    },
+    "Romance-2017": {
+        "title": "Beauty and the Beast",
+        "year": "2017",
+        "revenue": 1266115964
+    },
+    "Romance-2019": {
+        "title": "Aladdin",
+        "year": "2019",
+        "revenue": 1054300000
+    },
+    "Romance-2020": {
+        "title": "After We Collided",
+        "year": "2020",
+        "revenue": 47990414
+    },
+    "Romance-2021": {
+        "title": "My Love",
+        "year": "2021",
+        "revenue": 114000000
+    },
+    "Romance-2023": {
+        "title": "The Little Mermaid",
+        "year": "2023",
+        "revenue": 569626289
+    },
+    "Romance-2024": {
         "title": "Wicked",
         "year": "2024",
         "revenue": 747289164
     },
-    "Drama-2020": {
-        "title": "The Eight Hundred",
-        "year": "2020",
-        "revenue": 461421559
+    "Romance-2025": {
+        "title": "Bridget Jones: Mad About the Boy",
+        "year": "2025",
+        "revenue": 129727367
     },
-    "Drama-2016": {
-        "title": "The Jungle Book",
-        "year": "2016",
-        "revenue": 966550600
-    },
-    "Drama-2012": {
-        "title": "The Dark Knight Rises",
-        "year": "2012",
-        "revenue": 1081041287
+    "Drama-2007": {
+        "title": "I Am Legend",
+        "year": "2007",
+        "revenue": 585410052
     },
     "Drama-2008": {
         "title": "The Dark Knight",
         "year": "2008",
         "revenue": 1004558444
     },
-    "Drama-2021": {
-        "title": "The Battle at Lake Changjin",
-        "year": "2021",
-        "revenue": 902540935
+    "Drama-2009": {
+        "title": "The Twilight Saga: New Moon",
+        "year": "2009",
+        "revenue": 709827462
     },
-    "Drama-2017": {
-        "title": "Spider-Man: Homecoming",
-        "year": "2017",
-        "revenue": 880166924
+    "Drama-2011": {
+        "title": "Rise of the Planet of the Apes",
+        "year": "2011",
+        "revenue": 481800873
+    },
+    "Drama-2012": {
+        "title": "The Dark Knight Rises",
+        "year": "2012",
+        "revenue": 1081041287
     },
     "Drama-2013": {
         "title": "Gravity",
         "year": "2013",
         "revenue": 723192705
     },
-    "Drama-2009": {
-        "title": "The Twilight Saga: New Moon",
-        "year": "2009",
-        "revenue": 709827462
+    "Drama-2015": {
+        "title": "Inside Out",
+        "year": "2015",
+        "revenue": 857611174
     },
-    "Comedy-2024": {
-        "title": "Inside Out 2",
-        "year": "2024",
-        "revenue": 1698863816
-    },
-    "Comedy-2020": {
-        "title": "Sonic the Hedgehog",
-        "year": "2020",
-        "revenue": 319715683
-    },
-    "Comedy-2016": {
-        "title": "Finding Dory",
+    "Drama-2016": {
+        "title": "The Jungle Book",
         "year": "2016",
-        "revenue": 1028600000
+        "revenue": 966550600
     },
-    "Comedy-2012": {
-        "title": "Ice Age: Continental Drift",
-        "year": "2012",
-        "revenue": 877244782
+    "Drama-2017": {
+        "title": "Spider-Man: Homecoming",
+        "year": "2017",
+        "revenue": 880166924
+    },
+    "Drama-2019": {
+        "title": "The Lion King",
+        "year": "2019",
+        "revenue": 1662020819
+    },
+    "Drama-2020": {
+        "title": "The Eight Hundred",
+        "year": "2020",
+        "revenue": 461421559
+    },
+    "Drama-2021": {
+        "title": "The Battle at Lake Changjin",
+        "year": "2021",
+        "revenue": 902540935
+    },
+    "Drama-2023": {
+        "title": "Oppenheimer",
+        "year": "2023",
+        "revenue": 952000000
+    },
+    "Drama-2024": {
+        "title": "Wicked",
+        "year": "2024",
+        "revenue": 747289164
+    },
+    "Drama-2025": {
+        "title": "Bridget Jones: Mad About the Boy",
+        "year": "2025",
+        "revenue": 129727367
+    },
+    "Comedy-2007": {
+        "title": "Shrek the Third",
+        "year": "2007",
+        "revenue": 813367380
     },
     "Comedy-2008": {
         "title": "Kung Fu Panda",
         "year": "2008",
         "revenue": 632091832
     },
-    "Comedy-2021": {
-        "title": "Hi, Mom",
-        "year": "2021",
-        "revenue": 822049668
+    "Comedy-2009": {
+        "title": "Ice Age: Dawn of the Dinosaurs",
+        "year": "2009",
+        "revenue": 886686817
     },
-    "Comedy-2017": {
-        "title": "Despicable Me 3",
-        "year": "2017",
-        "revenue": 1034800131
+    "Comedy-2011": {
+        "title": "Kung Fu Panda 2",
+        "year": "2011",
+        "revenue": 665692281
+    },
+    "Comedy-2012": {
+        "title": "Ice Age: Continental Drift",
+        "year": "2012",
+        "revenue": 877244782
     },
     "Comedy-2013": {
         "title": "Despicable Me 2",
         "year": "2013",
         "revenue": 970766005
     },
-    "Comedy-2009": {
-        "title": "Ice Age: Dawn of the Dinosaurs",
-        "year": "2009",
-        "revenue": 886686817
+    "Comedy-2015": {
+        "title": "Minions",
+        "year": "2015",
+        "revenue": 1159457503
     },
-    "Documentary-2024": {
-        "title": "moi.digital untitled Volume 3",
-        "year": "2024",
-        "revenue": 100000000
-    },
-    "Documentary-2020": {
-        "title": "Break the Silence: The Movie",
-        "year": "2020",
-        "revenue": 8954945
-    },
-    "Documentary-2016": {
-        "title": "A Beautiful Planet",
+    "Comedy-2016": {
+        "title": "Finding Dory",
         "year": "2016",
-        "revenue": 24000000
+        "revenue": 1028600000
     },
-    "Documentary-2012": {
-        "title": "Chimpanzee",
-        "year": "2012",
-        "revenue": 34823764
+    "Comedy-2017": {
+        "title": "Despicable Me 3",
+        "year": "2017",
+        "revenue": 1034800131
+    },
+    "Comedy-2019": {
+        "title": "Frozen II",
+        "year": "2019",
+        "revenue": 1453683476
+    },
+    "Comedy-2020": {
+        "title": "Sonic the Hedgehog",
+        "year": "2020",
+        "revenue": 319715683
+    },
+    "Comedy-2021": {
+        "title": "Hi, Mom",
+        "year": "2021",
+        "revenue": 822049668
+    },
+    "Comedy-2023": {
+        "title": "Barbie",
+        "year": "2023",
+        "revenue": 1445638421
+    },
+    "Comedy-2024": {
+        "title": "Inside Out 2",
+        "year": "2024",
+        "revenue": 1698863816
+    },
+    "Comedy-2025": {
+        "title": "A Minecraft Movie",
+        "year": "2025",
+        "revenue": 552664857
+    },
+    "Documentary-2007": {
+        "title": "Earth",
+        "year": "2007",
+        "revenue": 109000000
     },
     "Documentary-2008": {
         "title": "Hannah Montana & Miley Cyrus: Best of Both Worlds Concert",
         "year": "2008",
         "revenue": 70642966
     },
-    "Documentary-2021": {
-        "title": "Roadrunner: A Film About Anthony Bourdain",
-        "year": "2021",
-        "revenue": 3701480
+    "Documentary-2009": {
+        "title": "This Is It",
+        "year": "2009",
+        "revenue": 261200000
     },
-    "Documentary-2017": {
-        "title": "Vasco Modena Park - Il film",
-        "year": "2017",
-        "revenue": 14072400
+    "Documentary-2011": {
+        "title": "Justin Bieber: Never Say Never",
+        "year": "2011",
+        "revenue": 99036827
+    },
+    "Documentary-2012": {
+        "title": "Chimpanzee",
+        "year": "2012",
+        "revenue": 34823764
     },
     "Documentary-2013": {
         "title": "One Direction: This Is Us",
         "year": "2013",
         "revenue": 68500000
     },
-    "Documentary-2009": {
-        "title": "This Is It",
+    "Documentary-2015": {
+        "title": "Amy",
+        "year": "2015",
+        "revenue": 23706386
+    },
+    "Documentary-2016": {
+        "title": "A Beautiful Planet",
+        "year": "2016",
+        "revenue": 24000000
+    },
+    "Documentary-2017": {
+        "title": "Vasco Modena Park - Il film",
+        "year": "2017",
+        "revenue": 14072400
+    },
+    "Documentary-2019": {
+        "title": "Bring the Soul: The Movie",
+        "year": "2019",
+        "revenue": 12150259
+    },
+    "Documentary-2020": {
+        "title": "Break the Silence: The Movie",
+        "year": "2020",
+        "revenue": 8954945
+    },
+    "Documentary-2021": {
+        "title": "Roadrunner: A Film About Anthony Bourdain",
+        "year": "2021",
+        "revenue": 3701480
+    },
+    "Documentary-2023": {
+        "title": "Renaissance: A Film by Beyonc\u00e9",
+        "year": "2023",
+        "revenue": 44029271
+    },
+    "Documentary-2024": {
+        "title": "moi.digital untitled Volume 3",
+        "year": "2024",
+        "revenue": 100000000
+    },
+    "Documentary-2025": {
+        "title": "Becoming Led Zeppelin",
+        "year": "2025",
+        "revenue": 6625821
+    },
+    "Action-2007": {
+        "title": "Pirates of the Caribbean: At World's End",
+        "year": "2007",
+        "revenue": 961691209
+    },
+    "Action-2008": {
+        "title": "The Dark Knight",
+        "year": "2008",
+        "revenue": 1004558444
+    },
+    "Action-2009": {
+        "title": "Avatar",
         "year": "2009",
-        "revenue": 261200000
+        "revenue": 2923706026
+    },
+    "Action-2011": {
+        "title": "Transformers: Dark of the Moon",
+        "year": "2011",
+        "revenue": 1123794079
+    },
+    "Action-2012": {
+        "title": "The Avengers",
+        "year": "2012",
+        "revenue": 1518815515
+    },
+    "Action-2013": {
+        "title": "Iron Man 3",
+        "year": "2013",
+        "revenue": 1215577205
+    },
+    "Action-2015": {
+        "title": "Star Wars: The Force Awakens",
+        "year": "2015",
+        "revenue": 2068223624
+    },
+    "Action-2016": {
+        "title": "Captain America: Civil War",
+        "year": "2016",
+        "revenue": 1155046416
+    },
+    "Action-2017": {
+        "title": "Star Wars: The Last Jedi",
+        "year": "2017",
+        "revenue": 1332698830
+    },
+    "Action-2019": {
+        "title": "Avengers: Endgame",
+        "year": "2019",
+        "revenue": 2799439100
+    },
+    "Action-2020": {
+        "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+        "year": "2020",
+        "revenue": 507119058
+    },
+    "Action-2021": {
+        "title": "Spider-Man: No Way Home",
+        "year": "2021",
+        "revenue": 1921847111
+    },
+    "Action-2023": {
+        "title": "Guardians of the Galaxy Vol. 3",
+        "year": "2023",
+        "revenue": 845600000
+    },
+    "Action-2024": {
+        "title": "Deadpool & Wolverine",
+        "year": "2024",
+        "revenue": 1338073645
+    },
+    "Action-2025": {
+        "title": "Detective Chinatown 1900",
+        "year": "2025",
+        "revenue": 441460000
+    },
+    "Animation-2007": {
+        "title": "Shrek the Third",
+        "year": "2007",
+        "revenue": 813367380
+    },
+    "Animation-2008": {
+        "title": "Kung Fu Panda",
+        "year": "2008",
+        "revenue": 632091832
+    },
+    "Animation-2009": {
+        "title": "Ice Age: Dawn of the Dinosaurs",
+        "year": "2009",
+        "revenue": 886686817
+    },
+    "Animation-2011": {
+        "title": "Kung Fu Panda 2",
+        "year": "2011",
+        "revenue": 665692281
+    },
+    "Animation-2012": {
+        "title": "Ice Age: Continental Drift",
+        "year": "2012",
+        "revenue": 877244782
+    },
+    "Animation-2013": {
+        "title": "Frozen",
+        "year": "2013",
+        "revenue": 1274219009
+    },
+    "Animation-2015": {
+        "title": "Minions",
+        "year": "2015",
+        "revenue": 1159457503
+    },
+    "Animation-2016": {
+        "title": "Finding Dory",
+        "year": "2016",
+        "revenue": 1028600000
+    },
+    "Animation-2017": {
+        "title": "Despicable Me 3",
+        "year": "2017",
+        "revenue": 1034800131
+    },
+    "Animation-2019": {
+        "title": "The Lion King",
+        "year": "2019",
+        "revenue": 1662020819
+    },
+    "Animation-2020": {
+        "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+        "year": "2020",
+        "revenue": 507119058
+    },
+    "Animation-2021": {
+        "title": "Sing 2",
+        "year": "2021",
+        "revenue": 408402685
+    },
+    "Animation-2023": {
+        "title": "The Super Mario Bros. Movie",
+        "year": "2023",
+        "revenue": 1362000000
+    },
+    "Animation-2024": {
+        "title": "Inside Out 2",
+        "year": "2024",
+        "revenue": 1698863816
+    },
+    "Animation-2025": {
+        "title": "Ne Zha 2",
+        "year": "2025",
+        "revenue": 2150000000
     }
 }
