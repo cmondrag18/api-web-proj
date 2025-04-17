@@ -1,7 +1,7 @@
 import sqlite3
 import matplotlib.pyplot as plt
 
-conn = sqlite3.connect('sql_processing.db')
+conn = sqlite3.connect('sql_processing_clean.db')
 cursor = conn.cursor()
 
 cursor.execute("""
@@ -10,7 +10,7 @@ cursor.execute("""
         AVG(tgm.revenue) AS avg_revenue, 
         AVG(tr.popularity) AS avg_popularity
     FROM 
-        top_grossing_movies tgm
+        box_office_movies tgm
     JOIN 
         tracks tr ON tgm.year = tr.year  -- assuming 'year' column is common
     GROUP BY 
