@@ -36,7 +36,7 @@ ax1.set_xlabel('Year')
 ax1.set_ylabel('Average Revenue (in Millions)', color='tab:blue')
 ax1.plot(years, avg_revenues_in_millions, marker='o', linestyle='-', color='tab:blue', label='Average Revenue')
 ax1.tick_params(axis='y', labelcolor='tab:blue')
-ax1.set_title('Average Movie Revnue Per Year')
+ax1.set_title('Average Movie Revenue Per Year')
 
 ax2.set_xlabel('Year')
 ax2.set_ylabel('Average Popularity', color='tab:orange')
