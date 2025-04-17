@@ -112,7 +112,7 @@ for key, movie in movie_data.items():
             VALUES (?, ?, ?, ?)
         ''', (genre, int(year), title, revenue))
 
-# recreate top_grossing_movies table with genre
+# create top_grossing_movies table with genre
 cursor.execute("DROP TABLE IF EXISTS top_grossing_movies")
 
 cursor.execute('''
@@ -137,6 +137,8 @@ for year, movies in top_movies.items():
             INSERT INTO top_grossing_movies (year, title, genre, revenue)
             VALUES (?, ?, ?, ?)
         ''', (int(year), title, genre, revenue))
+
+# END OF MIA CODE
 
 # create the 'music_election' table: outer join between 'tracks' and 'election_results' on 'year'
 cursor.execute("DROP TABLE IF EXISTS music_election")  # drop if already exists
