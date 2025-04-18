@@ -7,7 +7,7 @@ import pandas as pd
 json_files = ['2024_top_songs.json', '2020_top_songs.json', '2016_top_songs.json', '2012_top_songs.json']
 
 
-conn = sqlite3.connect('sql_processing_clean.db')
+conn = sqlite3.connect('sql_processing_test.db')
 cursor = conn.cursor()
 
 
@@ -94,7 +94,6 @@ for election in election_data:
 
 # MIA'S CODE
 
-
 # === Create movie_genre_id table (normalized genres) ===
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS movie_genre_id (
@@ -103,11 +102,9 @@ CREATE TABLE IF NOT EXISTS movie_genre_id (
 )
 ''')
 
-
-# === Create box_office_movies table with genre_id as foreign key ===
-cursor.execute("DROP TABLE IF EXISTS box_office_movies")
+# === Create box_office_movies table if it doesn't already exist ===
 cursor.execute('''
-CREATE TABLE box_office_movies (
+CREATE TABLE IF NOT EXISTS box_office_movies (
    genre_id INTEGER,
    year INTEGER,
    title TEXT,
@@ -116,55 +113,40 @@ CREATE TABLE box_office_movies (
 )
 ''')
 
-
-# Drop and recreate both tables to fully reset IDs
-cursor.execute("DROP TABLE IF EXISTS box_office_movies")
-cursor.execute("DROP TABLE IF EXISTS movie_genre_id")
-
-
-cursor.execute('''
-CREATE TABLE movie_genre_id (
-   id INTEGER PRIMARY KEY AUTOINCREMENT,
-   genre TEXT UNIQUE
-)
-''')
-
-
-cursor.execute('''
-CREATE TABLE box_office_movies (
-   genre_id INTEGER,
-   year INTEGER,
-   title TEXT,
-   revenue INTEGER,
-   FOREIGN KEY (genre_id) REFERENCES movie_genre_id(id)
-)
-''')
-
-
-# Insert data from cache_tmdb.json
+# === Insert up to 25 NEW movies from cache_tmdb.json ===
 with open('cache_tmdb.json', 'r') as f:
    movie_data = json.load(f)
 
-
+insert_count = 0
 for key, movie in movie_data.items():
-   if movie:
-       genre, year = key.rsplit("-", 1)
-       title = movie.get("title", "")
-       revenue = movie.get("revenue", 0)
+    if insert_count >= 25:
+        break
 
+    if movie:
+        genre, year = key.rsplit("-", 1)
+        title = movie.get("title", "")
+        revenue = movie.get("revenue", 0)
 
-       # Insert genre if it doesn't exist
-       cursor.execute("INSERT OR IGNORE INTO movie_genre_id (genre) VALUES (?)", (genre,))
-       # Get genre ID
-       cursor.execute("SELECT id FROM movie_genre_id WHERE genre = ?", (genre,))
-       genre_id = cursor.fetchone()[0]
+        # Skip if this movie is already in the table
+        cursor.execute("SELECT 1 FROM box_office_movies WHERE title = ? AND year = ?", (title, int(year)))
+        if cursor.fetchone():
+            continue
 
+        # Insert genre if it doesn't exist
+        cursor.execute("INSERT OR IGNORE INTO movie_genre_id (genre) VALUES (?)", (genre,))
+        cursor.execute("SELECT id FROM movie_genre_id WHERE genre = ?", (genre,))
+        genre_id = cursor.fetchone()[0]
 
-       # Insert movie using genre_id
-       cursor.execute('''
-           INSERT INTO box_office_movies (genre_id, year, title, revenue)
-           VALUES (?, ?, ?, ?)
-       ''', (genre_id, int(year), title, revenue))
+        # Insert movie with genre_id
+        cursor.execute('''
+            INSERT INTO box_office_movies (genre_id, year, title, revenue)
+            VALUES (?, ?, ?, ?)
+        ''', (genre_id, int(year), title, revenue))
+
+        insert_count += 1
+
+print(f"{insert_count} new movies inserted into box_office_movies.")
+
 
 
 # insert data from top_20_movies_by_year.json

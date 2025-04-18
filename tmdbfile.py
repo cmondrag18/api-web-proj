@@ -7,16 +7,21 @@ API_KEY = 'd7310332d3cce9353cbd1ed056aa7e1e'
 CACHE_FILE = 'cache_tmdb.json'
 
 
-# 7 genres from TMDb
+# 11 genres from TMDb
 GENRES = {
-   'Sci-Fi': 878,
-   'Romance': 10749,
-   'Drama': 18,
-   'Comedy': 35,
-   'Documentary': 99,
-   'Action': 28,
-   'Animation': 16
+    'Sci-Fi': 878,
+    'Romance': 10749,
+    'Drama': 18,
+    'Comedy': 35,
+    'Documentary': 99,
+    'Action': 28,
+    'Animation': 16,
+    'Adventure': 12,
+    'Fantasy': 14,
+    'Thriller': 53,
+    'Mystery': 9648  # <-- Newly added
 }
+
 
 
 # 5 election years ±1 = 15 years total
@@ -174,7 +179,7 @@ def main():
                print(f"{genre_name} ({year}): {movie['title']} - ${movie['revenue']:,}")
            else:
                print(f"{genre_name} ({year}): No data.")
-   print(f"\nTotal movies cached: {len(cache)} (Expected: 105)")
+   print(f"\nTotal movies cached: {len(cache)} (Expected: 165)")
 
 
    # === Call function to save top 20 movies per election year ===

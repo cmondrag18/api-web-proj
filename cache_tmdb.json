@@ -72,7 +72,7 @@
     "Sci-Fi-2025": {
         "title": "Captain America: Brave New World",
         "year": "2025",
-        "revenue": 411409721
+        "revenue": 414245291
     },
     "Romance-2007": {
         "title": "Enchanted",
@@ -523,5 +523,305 @@
         "title": "Ne Zha 2",
         "year": "2025",
         "revenue": 2150000000
+    },
+    "Adventure-2007": {
+        "title": "Pirates of the Caribbean: At World's End",
+        "year": "2007",
+        "revenue": 961691209
+    },
+    "Adventure-2008": {
+        "title": "Indiana Jones and the Kingdom of the Crystal Skull",
+        "year": "2008",
+        "revenue": 786636033
+    },
+    "Adventure-2009": {
+        "title": "Avatar",
+        "year": "2009",
+        "revenue": 2923706026
+    },
+    "Adventure-2011": {
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "year": "2011",
+        "revenue": 1341511219
+    },
+    "Adventure-2012": {
+        "title": "The Avengers",
+        "year": "2012",
+        "revenue": 1518815515
+    },
+    "Adventure-2013": {
+        "title": "Frozen",
+        "year": "2013",
+        "revenue": 1274219009
+    },
+    "Adventure-2015": {
+        "title": "Star Wars: The Force Awakens",
+        "year": "2015",
+        "revenue": 2068223624
+    },
+    "Adventure-2016": {
+        "title": "Captain America: Civil War",
+        "year": "2016",
+        "revenue": 1155046416
+    },
+    "Adventure-2017": {
+        "title": "Star Wars: The Last Jedi",
+        "year": "2017",
+        "revenue": 1332698830
+    },
+    "Adventure-2019": {
+        "title": "Avengers: Endgame",
+        "year": "2019",
+        "revenue": 2799439100
+    },
+    "Adventure-2020": {
+        "title": "Dolittle",
+        "year": "2020",
+        "revenue": 251410631
+    },
+    "Adventure-2021": {
+        "title": "Spider-Man: No Way Home",
+        "year": "2021",
+        "revenue": 1921847111
+    },
+    "Adventure-2023": {
+        "title": "Barbie",
+        "year": "2023",
+        "revenue": 1445638421
+    },
+    "Adventure-2024": {
+        "title": "Inside Out 2",
+        "year": "2024",
+        "revenue": 1698863816
+    },
+    "Adventure-2025": {
+        "title": "Ne Zha 2",
+        "year": "2025",
+        "revenue": 2150000000
+    },
+    "Fantasy-2007": {
+        "title": "Pirates of the Caribbean: At World's End",
+        "year": "2007",
+        "revenue": 961691209
+    },
+    "Fantasy-2008": {
+        "title": "Hancock",
+        "year": "2008",
+        "revenue": 629400000
+    },
+    "Fantasy-2009": {
+        "title": "Avatar",
+        "year": "2009",
+        "revenue": 2923706026
+    },
+    "Fantasy-2011": {
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "year": "2011",
+        "revenue": 1341511219
+    },
+    "Fantasy-2012": {
+        "title": "The Hobbit: An Unexpected Journey",
+        "year": "2012",
+        "revenue": 1021103568
+    },
+    "Fantasy-2013": {
+        "title": "Frozen",
+        "year": "2013",
+        "revenue": 1274219009
+    },
+    "Fantasy-2015": {
+        "title": "Cinderella",
+        "year": "2015",
+        "revenue": 543514353
+    },
+    "Fantasy-2016": {
+        "title": "The Jungle Book",
+        "year": "2016",
+        "revenue": 966550600
+    },
+    "Fantasy-2017": {
+        "title": "Beauty and the Beast",
+        "year": "2017",
+        "revenue": 1266115964
+    },
+    "Fantasy-2019": {
+        "title": "Frozen II",
+        "year": "2019",
+        "revenue": 1453683476
+    },
+    "Fantasy-2020": {
+        "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+        "year": "2020",
+        "revenue": 507119058
+    },
+    "Fantasy-2021": {
+        "title": "Hi, Mom",
+        "year": "2021",
+        "revenue": 822049668
+    },
+    "Fantasy-2023": {
+        "title": "Wonka",
+        "year": "2023",
+        "revenue": 634502312
+    },
+    "Fantasy-2024": {
+        "title": "Wicked",
+        "year": "2024",
+        "revenue": 747289164
+    },
+    "Fantasy-2025": {
+        "title": "Ne Zha 2",
+        "year": "2025",
+        "revenue": 2150000000
+    },
+    "Thriller-2007": {
+        "title": "I Am Legend",
+        "year": "2007",
+        "revenue": 585410052
+    },
+    "Thriller-2008": {
+        "title": "The Dark Knight",
+        "year": "2008",
+        "revenue": 1004558444
+    },
+    "Thriller-2009": {
+        "title": "Angels & Demons",
+        "year": "2009",
+        "revenue": 485930816
+    },
+    "Thriller-2011": {
+        "title": "Mission: Impossible - Ghost Protocol",
+        "year": "2011",
+        "revenue": 694713380
+    },
+    "Thriller-2012": {
+        "title": "Skyfall",
+        "year": "2012",
+        "revenue": 1108594176
+    },
+    "Thriller-2013": {
+        "title": "Fast & Furious 6",
+        "year": "2013",
+        "revenue": 788700000
+    },
+    "Thriller-2015": {
+        "title": "Jurassic World",
+        "year": "2015",
+        "revenue": 1671537444
+    },
+    "Thriller-2016": {
+        "title": "Jason Bourne",
+        "year": "2016",
+        "revenue": 415484914
+    },
+    "Thriller-2017": {
+        "title": "The Fate of the Furious",
+        "year": "2017",
+        "revenue": 1236000000
+    },
+    "Thriller-2019": {
+        "title": "Joker",
+        "year": "2019",
+        "revenue": 1078958629
+    },
+    "Thriller-2020": {
+        "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+        "year": "2020",
+        "revenue": 507119058
+    },
+    "Thriller-2021": {
+        "title": "No Time to Die",
+        "year": "2021",
+        "revenue": 774153024
+    },
+    "Thriller-2023": {
+        "title": "Fast X",
+        "year": "2023",
+        "revenue": 704709660
+    },
+    "Thriller-2024": {
+        "title": "Bad Boys: Ride or Die",
+        "year": "2024",
+        "revenue": 404547819
+    },
+    "Thriller-2025": {
+        "title": "Captain America: Brave New World",
+        "year": "2025",
+        "revenue": 414245291
+    },
+    "Mystery-2007": {
+        "title": "National Treasure: Book of Secrets",
+        "year": "2007",
+        "revenue": 459200000
+    },
+    "Mystery-2008": {
+        "title": "Eagle Eye",
+        "year": "2008",
+        "revenue": 178800000
+    },
+    "Mystery-2009": {
+        "title": "Sherlock Holmes",
+        "year": "2009",
+        "revenue": 524028679
+    },
+    "Mystery-2011": {
+        "title": "The Adventures of Tintin",
+        "year": "2011",
+        "revenue": 373993951
+    },
+    "Mystery-2012": {
+        "title": "Prometheus",
+        "year": "2012",
+        "revenue": 403354469
+    },
+    "Mystery-2013": {
+        "title": "Oblivion",
+        "year": "2013",
+        "revenue": 286168572
+    },
+    "Mystery-2015": {
+        "title": "Tomorrowland",
+        "year": "2015",
+        "revenue": 209200000
+    },
+    "Mystery-2016": {
+        "title": "Now You See Me 2",
+        "year": "2016",
+        "revenue": 334897606
+    },
+    "Mystery-2017": {
+        "title": "Murder on the Orient Express",
+        "year": "2017",
+        "revenue": 352800000
+    },
+    "Mystery-2019": {
+        "title": "Knives Out",
+        "year": "2019",
+        "revenue": 312897920
+    },
+    "Mystery-2020": {
+        "title": "The Yin-Yang Master: Dream of Eternity",
+        "year": "2020",
+        "revenue": 69000000
+    },
+    "Mystery-2021": {
+        "title": "Detective Chinatown 3",
+        "year": "2021",
+        "revenue": 686257563
+    },
+    "Mystery-2023": {
+        "title": "Fast X",
+        "year": "2023",
+        "revenue": 704709660
+    },
+    "Mystery-2024": {
+        "title": "A Place Called Silence",
+        "year": "2024",
+        "revenue": 192856689
+    },
+    "Mystery-2025": {
+        "title": "Detective Chinatown 1900",
+        "year": "2025",
+        "revenue": 441460000
     }
 }
