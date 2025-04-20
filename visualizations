@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sqlite3
 
-db = 'sql_processing_clean.db'
+db = 'sql_processing_final.db'
 conn = sqlite3.connect(db)
 
 query = "SELECT * FROM music_election"

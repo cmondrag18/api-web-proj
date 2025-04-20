@@ -1,7 +1,7 @@
 import sqlite3
 import matplotlib.pyplot as plt
 
-conn = sqlite3.connect('sql_processing_clean.db')
+conn = sqlite3.connect('sql_processing_final.db')
 cursor = conn.cursor()
 
 cursor.execute("""

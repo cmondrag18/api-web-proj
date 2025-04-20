@@ -1,0 +1,6 @@
+Top-Grossing Genre by Election Year (2012, 2016, 2020, 2024)
+
+2012 (Democratic win): Sci-Fi - $1,518,815,515
+2016 (Republican win): Sci-Fi - $1,155,046,416
+2020 (Democratic win): Action - $507,119,058
+2024 (Republican win): Comedy - $1,698,863,816

@@ -4,7 +4,7 @@ from collections import defaultdict
 import matplotlib.ticker as mtick
 
 # Connect to DB
-conn = sqlite3.connect('sql_processing_clean.db')
+conn = sqlite3.connect('sql_processing_final.db')
 cursor = conn.cursor()
 
 # All 11 genres
@@ -81,4 +81,22 @@ plt.xlabel('Genre')
 plt.xticks(ticks=x, labels=genres, rotation=30)
 plt.legend()
 plt.tight_layout()
+
+# print("Reached file writing section.")
+
+try:
+    output_path = 'avg_revenue_by_genre_and_party.txt'
+    with open(output_path, 'w') as f:
+        f.write("Average Revenue by Genre and Winning Party (2012, 2016, 2020, 2024)\n\n")
+        for i, genre in enumerate(genres):
+            f.write(f"{genre}:\n")
+            f.write(f"  Democratic Wins: ${democrat_avgs[i]:,.0f}\n")
+            f.write(f"  Republican Wins: ${republican_avgs[i]:,.0f}\n\n")
+    print(f"Average revenue data written to {output_path}")
+    import os
+    print("Full path:", os.path.abspath(output_path))
+except:
+    print("Failed to write file:")
+
 plt.show()
+
