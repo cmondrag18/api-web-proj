@@ -75,7 +75,7 @@ plt.title('Highest Earning Genre per Election Year by Winning Party')
 plt.xticks(years)
 plt.tight_layout()
 
-print("Reached file writing section.")
+# print("Reached file writing section.")
 
 # === Write top genre per year to text file ===
 try:
