@@ -45,7 +45,7 @@ top_genre_per_year = {}
 for year, genre_revs in revenue_by_year_genre.items():
     top_genre_per_year[year] = max(genre_revs, key=lambda x: x[1])  # (genre, revenue)
 
-# Step 4: Prepare for plotting
+# Step 4: Prep for plotting
 def format_currency(val):
     if val >= 1_000_000_000:
         return f"${val/1_000_000_000:.1f}B"
