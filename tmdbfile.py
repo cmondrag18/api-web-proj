@@ -19,7 +19,7 @@ GENRES = {
     'Adventure': 12,
     'Fantasy': 14,
     'Thriller': 53,
-    'Mystery': 9648  # <-- Newly added
+    'Mystery': 9648  
 }
 
 
