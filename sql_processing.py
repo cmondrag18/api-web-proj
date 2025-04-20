@@ -7,7 +7,7 @@ import pandas as pd
 json_files = ['2024_top_songs.json', '2020_top_songs.json', '2016_top_songs.json', '2012_top_songs.json']
 
 
-conn = sqlite3.connect('sql_processing_miatest.db')
+conn = sqlite3.connect('sql_processing_test.db')
 cursor = conn.cursor()
 
 
