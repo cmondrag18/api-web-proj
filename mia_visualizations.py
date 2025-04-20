@@ -93,8 +93,6 @@ try:
             f.write(f"  Democratic Wins: ${democrat_avgs[i]:,.0f}\n")
             f.write(f"  Republican Wins: ${republican_avgs[i]:,.0f}\n\n")
     print(f"Average revenue data written to {output_path}")
-    import os
-    print("Full path:", os.path.abspath(output_path))
 except:
     print("Failed to write file:")
 

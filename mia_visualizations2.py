@@ -88,8 +88,6 @@ try:
             party = winners[year]
             f.write(f"{year} ({party} win): {genre} - ${revenue:,.0f}\n")
     print(f"Top genre data written to {output_path}")
-    import os
-    print("Full path:", os.path.abspath(output_path))
 except:
     print("Failed to write top genre data file.")
 
