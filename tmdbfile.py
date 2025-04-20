@@ -187,9 +187,5 @@ def main():
    # get_top_movies_overall(election_years_only)
 
 
-
-
-
-
 if __name__ == "__main__":
    main()

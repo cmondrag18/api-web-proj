@@ -7,7 +7,7 @@ import pandas as pd
 json_files = ['2024_top_songs.json', '2020_top_songs.json', '2016_top_songs.json', '2012_top_songs.json']
 
 
-conn = sqlite3.connect('sql_processing_test.db')
+conn = sqlite3.connect('sql_processing_miatest.db')
 cursor = conn.cursor()
 
 
@@ -97,7 +97,7 @@ for election in election_data:
 # === Create movie_genre_id table (normalized genres) ===
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS movie_genre_id (
-   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   id INTEGER PRIMARY KEY,
    genre TEXT UNIQUE
 )
 ''')
