@@ -234,34 +234,45 @@ with open('cache_tmdb.json', 'r') as f:
    movie_data = json.load(f)
 
 insert_count = 0
+processed_count = 0  # keeps track of records processed from the JSON file
+
+# Fetch existing movies from the database to check for duplicates
+cursor.execute("SELECT title, year FROM box_office_movies")
+existing_movies = set(cursor.fetchall())  # Store as a set for fast lookup
+
+# Open JSON files for top movies data
+with open('cache_tmdb.json', 'r') as f:
+   movie_data = json.load(f)
+
 for key, movie in movie_data.items():
     if insert_count >= 25:
-        break
+        break  # Stops at 25 movies
 
     if movie:
         genre, year = key.rsplit("-", 1)
         title = movie.get("title", "")
         revenue = movie.get("revenue", 0)
 
-        # Skip if this movie is already in the table
-        cursor.execute("SELECT 1 FROM box_office_movies WHERE title = ? AND year = ?", (title, int(year)))
-        if cursor.fetchone():
+        # Skip if this movie is already in the table by checking against existing_movies set
+        if (title, int(year)) in existing_movies:
             continue
 
-        # insert genre if it doesn't exist
+        # Insert genre if it doesn't exist
         cursor.execute("INSERT OR IGNORE INTO movie_genre_id (genre) VALUES (?)", (genre,))
         cursor.execute("SELECT id FROM movie_genre_id WHERE genre = ?", (genre,))
         genre_id = cursor.fetchone()[0]
 
-        # insert specific genre_id instead of string genre into box_office_movies
+        # Insert movie into box_office_movies table
         cursor.execute('''
             INSERT INTO box_office_movies (genre_id, year, title, revenue)
             VALUES (?, ?, ?, ?)
         ''', (genre_id, int(year), title, revenue))
 
-        insert_count += 1
+        insert_count += 1  # Increment insert_count after each insertion
+        processed_count += 1  # Count the number of processed records
 
 print(f"{insert_count} new movies inserted into box_office_movies.")
+
 
 # END OF MIA CODE
 
@@ -322,20 +333,24 @@ CREATE TABLE movie_election AS
 SELECT
    b.year,
    b.title,
-   b.genre_id,
+   GROUP_CONCAT(b.genre_id) AS genre_ids,  -- Concatenate all genre_ids into a single string
    b.revenue,
-   e.party_id,
-   e.presidential_nominee_id,
-   e.vice_presidential_nominee_id,
-   e.electoral_vote,
-   e.electoral_vote_percentage,
-   e.popular_vote,
-   e.popular_vote_percentage,
-   e.winner
+   MAX(e.party_id) AS party_id,  -- Aggregate party_id
+   MAX(e.presidential_nominee_id) AS presidential_nominee_id,  -- Aggregate presidential nominee ID
+   MAX(e.vice_presidential_nominee_id) AS vice_presidential_nominee_id,  -- Aggregate vice-presidential nominee ID
+   MAX(e.electoral_vote) AS electoral_vote,  -- Aggregate electoral vote
+   MAX(e.electoral_vote_percentage) AS electoral_vote_percentage,  -- Aggregate electoral vote percentage
+   MAX(e.popular_vote) AS popular_vote,  -- Aggregate popular vote
+   MAX(e.popular_vote_percentage) AS popular_vote_percentage,  -- Aggregate popular vote percentage
+   MAX(e.winner) AS winner  -- Aggregate winner
 FROM box_office_movies b
 LEFT OUTER JOIN election_results e ON b.year = e.year
+GROUP BY b.year, b.title, b.revenue  -- Group by movie properties
 ORDER BY b.year;
 ''')
+
+
+
 
 
 # select release date and year from tracks table
