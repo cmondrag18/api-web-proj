@@ -27,29 +27,27 @@ avg_popularities = [row[2] for row in results]
 
 avg_revenues_in_millions = [revenue / 1_000_000 for revenue in avg_revenues]
 
-# Create a figure with two subplots
+# creating two different figures
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
 
-# Plot Average Revenue on ax1
+# ax1 takes average revenue only
 ax1.set_xlabel('Year')
 ax1.set_ylabel('Average Revenue (in Millions)', color='tab:blue')
 ax1.plot(years, avg_revenues_in_millions, marker='o', linestyle='-', color='tab:blue', label='Average Revenue')
 ax1.tick_params(axis='y', labelcolor='tab:blue')
 ax1.set_title('Average Movie Revenue Per Year')
 
-# Plot Average Popularity on ax2
+# ax2 takes average popularity only
 ax2.set_xlabel('Year')
 ax2.set_ylabel('Average Popularity', color='tab:orange')
 ax2.plot(years, avg_popularities, marker='o', linestyle='-', color='tab:orange', label='Average Popularity')
 ax2.tick_params(axis='y', labelcolor='tab:orange')
 ax2.set_title('Average Song Popularity Per Year')
 
-# Adjust the layout to prevent overlap
+# tight_layout prevents overlap
 plt.tight_layout()
 
-# Save the figure
 plt.savefig('average_revenue_and_popularity.png')
 plt.savefig('average_revenue_and_popularity_separate.png')
 
-# Show the plot
 plt.show()

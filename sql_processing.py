@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS music_genres (
 )
 ''')
 
-# Insert music genres into the music_genres table
+# found every genre in the JSON files and saved them into music_genre SQL table
 genres = [
     ("female vocalists",),
     ("rnb",),
@@ -53,7 +53,7 @@ for genre in genres:
 
 cursor.execute("DROP TABLE IF EXISTS tracks")
 
-# create music table
+# create tracks table
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS tracks (
    track_name TEXT,
@@ -66,15 +66,14 @@ CREATE TABLE IF NOT EXISTS tracks (
 )
 ''')
 
-# === Find the number of records already inserted ===
+# finds number of records already inserted
 cursor.execute("SELECT COUNT(*) FROM tracks")
 existing_records = cursor.fetchone()[0]
 
-# === Insert 25 new songs into the tracks table ===
 insert_count = 0
-processed_count = 0  # To count the number of records processed from JSON files
+processed_count = 0  # keeps track of records processed from the JSON file
 
-# Assuming you have already loaded the JSON files as 'json_files'
+# opens json files for top songs of each year
 for json_file in json_files:
     with open(json_file, 'r') as f:
         data = json.load(f)
@@ -82,14 +81,14 @@ for json_file in json_files:
     for year, tracks in data.items():
         for track in tracks:
             if insert_count >= 25:
-                break  # Stop once we have inserted 25 records
+                break  # stops at 25
             
-            # Check if the track is already in the database (to avoid duplicates)
+            # ensures that duplicate tracks are not re-added
             cursor.execute("SELECT 1 FROM tracks WHERE track_name = ? AND year = ?", (track["track_name"], int(year)))
-            if cursor.fetchone():  # If the track already exists, skip it
+            if cursor.fetchone():  # skips track that already exists
                 continue
 
-            # Get the genre_id from the music_genres table based on the genre name
+            # gets the genre_id from the music_genres table based on the genre name
             cursor.execute("SELECT genre_id FROM music_genres WHERE genre_name = ?", (track["genre"],))
             genre_id = cursor.fetchone()
             
@@ -154,23 +153,6 @@ CREATE TABLE IF NOT EXISTS election_results (
 )
 ''')
 
-
-# create election table
-# cursor.execute('''
-# CREATE TABLE IF NOT EXISTS election_results (
-#    year INTEGER,
-#    party TEXT,
-#    presidential_nominee TEXT,
-#    vice_presidential_nominee TEXT,
-#    electoral_vote INTEGER,
-#    electoral_vote_percentage TEXT,
-#    popular_vote TEXT,
-#    popular_vote_percentage TEXT,
-#    winner TEXT
-# )
-# ''')
-
-
 # clear existing data to avoid duplicates in election_results table
 cursor.execute("DELETE FROM election_results")
 cursor.execute("DELETE FROM candidates")
@@ -228,7 +210,7 @@ for election in election_data:
 
 # MIA'S CODE
 
-# === Create movie_genre_id table (normalized genres) ===
+# creating separate table for movie_genres, sorting by an integer id
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS movie_genre_id (
    id INTEGER PRIMARY KEY,
@@ -236,7 +218,7 @@ CREATE TABLE IF NOT EXISTS movie_genre_id (
 )
 ''')
 
-# === Create box_office_movies table if it doesn't already exist ===
+# creating box_office_movies table
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS box_office_movies (
    genre_id INTEGER,
@@ -247,7 +229,7 @@ CREATE TABLE IF NOT EXISTS box_office_movies (
 )
 ''')
 
-# === Insert up to 25 NEW movies from cache_tmdb.json ===
+# loading 25 movies at a time
 with open('cache_tmdb.json', 'r') as f:
    movie_data = json.load(f)
 
@@ -266,12 +248,12 @@ for key, movie in movie_data.items():
         if cursor.fetchone():
             continue
 
-        # Insert genre if it doesn't exist
+        # insert genre if it doesn't exist
         cursor.execute("INSERT OR IGNORE INTO movie_genre_id (genre) VALUES (?)", (genre,))
         cursor.execute("SELECT id FROM movie_genre_id WHERE genre = ?", (genre,))
         genre_id = cursor.fetchone()[0]
 
-        # Insert movie with genre_id
+        # insert specific genre_id instead of string genre into box_office_movies
         cursor.execute('''
             INSERT INTO box_office_movies (genre_id, year, title, revenue)
             VALUES (?, ?, ?, ?)
@@ -327,7 +309,7 @@ for genre in genres:
    cursor.execute("INSERT OR IGNORE INTO music_genres (genre_name) VALUES (?)", (genre,))
 
 
-# Create the 'music_election' table: outer join between 'tracks' and 'election_results' on 'year'
+# create the 'music_election' table: outer join between 'tracks' and 'election_results' on 'year'
 cursor.execute("DROP TABLE IF EXISTS music_election")  # drop if already exists
 cursor.execute('''
 CREATE TABLE music_election AS
@@ -354,7 +336,6 @@ ORDER BY t.year;
 
 
 # create the 'movie_election' table: join box_office_movies, movie_genre_id, and election_results
-# === Create movie_election JOIN table (uses genre_id directly) ===
 cursor.execute("DROP TABLE IF EXISTS movie_election")
 cursor.execute('''
 CREATE TABLE movie_election AS
