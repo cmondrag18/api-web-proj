@@ -10,86 +10,220 @@ json_files = ['2024_top_songs.json', '2020_top_songs.json', '2016_top_songs.json
 conn = sqlite3.connect('sql_processing_final.db')
 cursor = conn.cursor()
 
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS music_genres (
+   genre_id INTEGER PRIMARY KEY AUTOINCREMENT,
+   genre_name TEXT UNIQUE NOT NULL
+)
+''')
+
+# Insert music genres into the music_genres table
+genres = [
+    ("female vocalists",),
+    ("rnb",),
+    ("pop",),
+    ("indie pop",),
+    ("indie",),
+    ("Hip-Hop",),
+    ("electronic",),
+    ("rock",),
+    ("soul",),
+    ("acoustic",),
+    ("country",),
+    ("House",),
+    ("dubstep",),
+    ("singer-songwriter",),
+    ("Reggaeton",),
+    ("cloud rap",),
+    ("drill",),
+    ("k-pop",),
+    ("psychedelic pop",),
+    ("seen live",),
+    ("blues",),
+    ("mexico",),
+    ("trap",),
+    ("rap",),
+    ("jamaican",)
+]
+
+# Insert genres into the music_genres table
+for genre in genres:
+    cursor.execute('''INSERT OR IGNORE INTO music_genres (genre_name) VALUES (?)''', genre)
+
+
+cursor.execute("DROP TABLE IF EXISTS tracks")
 
 # create music table
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS tracks (
    track_name TEXT,
-   artists TEXT,
-   genre TEXT,
+   genre_id INTEGER,
    album TEXT,
    release_date TEXT,
    popularity INTEGER,
-   year INTEGER
+   year INTEGER,
+   FOREIGN KEY (genre_id) REFERENCES music_genres(genre_id)
 )
 ''')
 
+# === Find the number of records already inserted ===
+cursor.execute("SELECT COUNT(*) FROM tracks")
+existing_records = cursor.fetchone()[0]
 
-# clear existing data to avoid duplicates in tracks table
-cursor.execute("DELETE FROM tracks")
+# === Insert 25 new songs into the tracks table ===
+insert_count = 0
+processed_count = 0  # To count the number of records processed from JSON files
 
-
-# insert music data
+# Assuming you have already loaded the JSON files as 'json_files'
 for json_file in json_files:
-   with open(json_file, 'r') as f:
-       data = json.load(f)
-  
-   for year, tracks in data.items():
-       for track in tracks:
-           track_name = track["track_name"]
-           artists = ", ".join(track["artists"])
-           genre = track["genre"]
-           album = track["album"]
-           release_date = track["release_date"]
-           popularity = track["popularity"]
-          
-           cursor.execute('''INSERT INTO tracks (track_name, artists, genre, album, release_date, popularity, year)
-                           VALUES (?, ?, ?, ?, ?, ?, ?)''',
-                           (track_name, artists, genre, album, release_date, popularity, int(year)))
+    with open(json_file, 'r') as f:
+        data = json.load(f)
 
+    for year, tracks in data.items():
+        for track in tracks:
+            if insert_count >= 25:
+                break  # Stop once we have inserted 25 records
+            
+            # Check if the track is already in the database (to avoid duplicates)
+            cursor.execute("SELECT 1 FROM tracks WHERE track_name = ? AND year = ?", (track["track_name"], int(year)))
+            if cursor.fetchone():  # If the track already exists, skip it
+                continue
 
-# create election table
+            # Get the genre_id from the music_genres table based on the genre name
+            cursor.execute("SELECT genre_id FROM music_genres WHERE genre_name = ?", (track["genre"],))
+            genre_id = cursor.fetchone()
+            
+            if genre_id:
+                genre_id = genre_id[0]
+            else:
+                genre_id = None  # In case the genre is not found
+
+            # Insert new records that haven't been inserted yet
+            track_name = track["track_name"]
+            album = track["album"]
+            release_date = track["release_date"]
+            popularity = track["popularity"]
+
+            cursor.execute('''INSERT INTO tracks (track_name, genre_id, album, release_date, popularity, year)
+                            VALUES (?, ?, ?, ?, ?, ?)''',
+                            (track_name, genre_id, album, release_date, popularity, int(year)))
+
+            insert_count += 1  # Increment insert_count after each insertion
+            processed_count += 1  # Count the number of processed records
+
+        if insert_count >= 25:
+            break  # Stop processing further data after 25 records
+    if insert_count >= 25:
+        break  # Stop processing files once 25 records have been inserted
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS parties (
+   party_id INTEGER PRIMARY KEY AUTOINCREMENT,
+   party_name TEXT UNIQUE NOT NULL
+)
+''')
+
+# Create the candidates table with candidate name and party_id reference
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS candidates (
+   candidate_id INTEGER PRIMARY KEY AUTOINCREMENT,
+   candidate_name TEXT NOT NULL,
+   party_id INTEGER,
+   FOREIGN KEY (party_id) REFERENCES parties(party_id)
+)
+''')
+
+# Create the election_results table
+cursor.execute("DROP TABLE IF EXISTS election_results")
+
+# Recreate the election_results table with the updated schema
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS election_results (
    year INTEGER,
-   party TEXT,
-   presidential_nominee TEXT,
-   vice_presidential_nominee TEXT,
+   party_id INTEGER,
+   presidential_nominee_id INTEGER,
+   vice_presidential_nominee_id INTEGER,
    electoral_vote INTEGER,
    electoral_vote_percentage TEXT,
    popular_vote TEXT,
    popular_vote_percentage TEXT,
-   winner TEXT
+   winner TEXT,
+   FOREIGN KEY (party_id) REFERENCES parties(party_id),
+   FOREIGN KEY (presidential_nominee_id) REFERENCES candidates(candidate_id),
+   FOREIGN KEY (vice_presidential_nominee_id) REFERENCES candidates(candidate_id)
 )
 ''')
 
 
+# create election table
+# cursor.execute('''
+# CREATE TABLE IF NOT EXISTS election_results (
+#    year INTEGER,
+#    party TEXT,
+#    presidential_nominee TEXT,
+#    vice_presidential_nominee TEXT,
+#    electoral_vote INTEGER,
+#    electoral_vote_percentage TEXT,
+#    popular_vote TEXT,
+#    popular_vote_percentage TEXT,
+#    winner TEXT
+# )
+# ''')
+
+
 # clear existing data to avoid duplicates in election_results table
 cursor.execute("DELETE FROM election_results")
+cursor.execute("DELETE FROM candidates")
+cursor.execute("DELETE FROM parties")
 
+parties = {}
+candidates = {}
 
-# insert election data
+# Insert parties and candidates into the tables
 with open('election_web_scrapping.json', 'r') as f:
-   election_data = json.load(f)
-
+    election_data = json.load(f)
 
 for election in election_data:
-   year = election["Year"]
-   for data in election["Election Data"]:
-       party = data["Party"]
-       presidential_nominee = data["Presidential Nominee"]
-       vice_presidential_nominee = data["Vice Presidential Nominee"]
-       electoral_vote = int(data["Electoral Vote"])
-       electoral_vote_percentage = data["Electoral Vote %"]
-       popular_vote = data["Popular Vote"]
-       popular_vote_percentage = data["Popular Vote %"]
-       winner = data["Winner"]
-      
-       cursor.execute('''INSERT INTO election_results (year, party, presidential_nominee, vice_presidential_nominee,
-                                     electoral_vote, electoral_vote_percentage, popular_vote,
-                                     popular_vote_percentage, winner) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)''',
-                                     (year, party, presidential_nominee, vice_presidential_nominee, electoral_vote,
-                                     electoral_vote_percentage, popular_vote, popular_vote_percentage, winner))
+    year = election["Year"]
+    for data in election["Election Data"]:
+        party_name = data["Party"]
+        presidential_nominee = data["Presidential Nominee"]
+        vice_presidential_nominee = data["Vice Presidential Nominee"]
+        
+        # Insert party if not already in parties table
+        if party_name not in parties:
+            cursor.execute('''INSERT INTO parties (party_name) VALUES (?)''', (party_name,))
+            parties[party_name] = cursor.lastrowid  # Get the last inserted ID for the party
+        
+        party_id = parties[party_name]
+
+        # Insert presidential nominee if not already in candidates table
+        if presidential_nominee not in candidates:
+            cursor.execute('''INSERT INTO candidates (candidate_name, party_id) VALUES (?, ?)''', 
+                           (presidential_nominee, party_id))
+            candidates[presidential_nominee] = cursor.lastrowid  # Get the last inserted ID for the candidate
+
+        # Insert vice-presidential nominee if not already in candidates table
+        if vice_presidential_nominee not in candidates:
+            cursor.execute('''INSERT INTO candidates (candidate_name, party_id) VALUES (?, ?)''', 
+                           (vice_presidential_nominee, party_id))
+            candidates[vice_presidential_nominee] = cursor.lastrowid  # Get the last inserted ID for the candidate
+
+        presidential_nominee_id = candidates[presidential_nominee]
+        vice_presidential_nominee_id = candidates[vice_presidential_nominee]
+
+        electoral_vote = int(data["Electoral Vote"])
+        electoral_vote_percentage = data["Electoral Vote %"]
+        popular_vote = data["Popular Vote"]
+        popular_vote_percentage = data["Popular Vote %"]
+        winner = data["Winner"]
+
+        # Insert election result using foreign keys
+        cursor.execute('''INSERT INTO election_results (year, party_id, presidential_nominee_id, vice_presidential_nominee_id,
+                                        electoral_vote, electoral_vote_percentage, popular_vote, popular_vote_percentage, winner) 
+                                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)''', 
+                                        (year, party_id, presidential_nominee_id, vice_presidential_nominee_id, electoral_vote,
+                                        electoral_vote_percentage, popular_vote, popular_vote_percentage, winner))
 
 
 # MIA'S CODE
@@ -202,9 +336,9 @@ SELECT
    t.track_name AS title,
    g.genre_id,  -- Use genre_id from music_genres table
    t.popularity AS popularity,
-   e.party,
-   e.presidential_nominee,
-   e.vice_presidential_nominee,
+   e.party_id,
+   e.presidential_nominee_id,
+   e.vice_presidential_nominee_id,
    e.electoral_vote,
    e.electoral_vote_percentage,
    e.popular_vote,
@@ -213,7 +347,7 @@ SELECT
    t.release_date  -- Explicitly include release_date here
 FROM tracks t
 LEFT OUTER JOIN election_results e ON t.year = e.year
-LEFT OUTER JOIN music_genres g ON t.genre = g.genre_name
+LEFT OUTER JOIN music_genres g ON t.genre_id = g.genre_name
 GROUP BY t.year, t.track_name  -- Group by year and track_name to remove duplicates
 ORDER BY t.year;
 ''')
@@ -229,9 +363,9 @@ SELECT
    b.title,
    b.genre_id,
    b.revenue,
-   e.party,
-   e.presidential_nominee,
-   e.vice_presidential_nominee,
+   e.party_id,
+   e.presidential_nominee_id,
+   e.vice_presidential_nominee_id,
    e.electoral_vote,
    e.electoral_vote_percentage,
    e.popular_vote,
