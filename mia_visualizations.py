@@ -12,16 +12,17 @@ genres = ['Sci-Fi', 'Romance', 'Drama', 'Comedy', 'Documentary', 'Action', 'Anim
 
 # Query for average revenue per genre, grouped by winning party
 cursor.execute(f'''
-   SELECT
-   g.genre,
-   e.party,
-   b.revenue
-FROM box_office_movies b
-JOIN movie_genre_id g ON b.genre_id = g.id
-JOIN election_results e ON b.year = e.year
-WHERE e.winner = 'Yes'
-  AND b.year IN (2012, 2016, 2020, 2024)
-  AND g.genre IN ({','.join(['?'] * len(genres))})
+    SELECT
+        g.genre,
+        p.party_name,
+        b.revenue
+    FROM box_office_movies b
+    JOIN movie_genre_id g ON b.genre_id = g.id
+    JOIN election_results e ON b.year = e.year
+    JOIN parties p ON e.party_id = p.party_id
+    WHERE e.winner = 'Yes'
+      AND b.year IN (2012, 2016, 2020, 2024)
+      AND g.genre IN ({','.join(['?'] * len(genres))})
 ''', genres)
 
 rows = cursor.fetchall()
@@ -82,8 +83,7 @@ plt.xticks(ticks=x, labels=genres, rotation=30)
 plt.legend()
 plt.tight_layout()
 
-# print("Reached file writing section.")
-
+# Write the calculated averages to a .txt file
 try:
     output_path = 'avg_revenue_by_genre_and_party.txt'
     with open(output_path, 'w') as f:
@@ -94,7 +94,6 @@ try:
             f.write(f"  Republican Wins: ${republican_avgs[i]:,.0f}\n\n")
     print(f"Average revenue data written to {output_path}")
 except:
-    print("Failed to write file:")
+    print("Failed to write file.")
 
 plt.show()
-

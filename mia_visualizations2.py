@@ -2,7 +2,7 @@ import sqlite3
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import matplotlib.ticker as mtick
-import os  
+import os
 
 # Connect to your database
 conn = sqlite3.connect('sql_processing_final.db')
@@ -15,16 +15,17 @@ target_genres = (
 )
 election_years = (2012, 2016, 2020, 2024)
 
-# Step 1: Get winning party for each election year
+# Step 1: Get winning party names by joining with parties table
 cursor.execute('''
-   SELECT year, party
-   FROM election_results
-   WHERE winner = 'Yes' AND year IN (2012, 2016, 2020, 2024)
+   SELECT e.year, p.party_name
+   FROM election_results e
+   JOIN parties p ON e.party_id = p.party_id
+   WHERE e.winner = 'Yes' AND e.year IN (2012, 2016, 2020, 2024)
 ''')
 winners = {row[0]: row[1] for row in cursor.fetchall()}
 
-# Step 2: JOIN with movie_genre_id to get genre name
-placeholders = ', '.join(['?'] * len(target_genres))  # Dynamically generate placeholders
+# Step 2: JOIN with movie_genre_id to get genre name and max revenue per genre/year
+placeholders = ', '.join(['?'] * len(target_genres))
 query = f'''
    SELECT b.year, g.genre, MAX(b.revenue)
    FROM box_office_movies b
@@ -35,9 +36,8 @@ query = f'''
 '''
 cursor.execute(query, target_genres)
 
-# Step 3: Find the top genre by revenue for each year
+# Step 3: Get top genre by revenue for each year
 revenue_by_year_genre = defaultdict(list)
-
 for year, genre, revenue in cursor.fetchall():
     revenue_by_year_genre[year].append((genre, revenue))
 
@@ -74,8 +74,6 @@ plt.xlabel('Election Year')
 plt.title('Highest Earning Genre per Election Year by Winning Party')
 plt.xticks(years)
 plt.tight_layout()
-
-# print("Reached file writing section.")
 
 # === Write top genre per year to text file ===
 try:
