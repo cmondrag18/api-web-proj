@@ -127,47 +127,6 @@ def update_cache():
                save_cache(cache, CACHE_FILE)
    return cache
 
-
-
-
-# def get_top_movies_overall(years, top_n=20):
-#     all_top_movies = {}
-#     for year in years:
-#         print(f"Fetching top 20 movies for {year}...")
-#         url = "https://api.themoviedb.org/3/discover/movie"
-#         params = {
-#             "api_key": API_KEY,
-#             "primary_release_year": year,
-#             "sort_by": "revenue.desc",
-#             "page": 1
-#         }
-#         response = requests.get(url, params=params)
-#         if response.status_code == 200:
-#             results = response.json().get("results", [])[:top_n]
-#             year_movies = []
-#             for movie in results:
-#                 details = get_movie_details(movie['id'])
-#                 if details:
-#                     year_movies.append({
-#                         "title": details.get("title"),
-#                         "year": details.get("release_date", '')[:4],
-#                         "revenue": details.get("revenue"),
-#                         "genre": details.get("genres", [{}])[0].get("name") if details.get("genres") else None
-#                     })
-#             all_top_movies[str(year)] = year_movies
-#         else:
-#             print(f"Failed to fetch top movies for {year}")
-
-
-#     with open("top_20_movies_by_year.json", "w") as f:
-#         json.dump(all_top_movies, f, indent=4)
-
-
-#     print("Top 20 movies by year saved to top_20_movies_by_year.json")
-
-
-
-
 def main():
    cache = update_cache()
    print("\n=== Summary of Cached Movies ===")
@@ -180,12 +139,6 @@ def main():
            else:
                print(f"{genre_name} ({year}): No data.")
    print(f"\nTotal movies cached: {len(cache)} (Expected: 165)")
-
-
-   # === Call function to save top 20 movies per election year ===
-   # election_years_only = [2008, 2012, 2016, 2020, 2024]
-   # get_top_movies_overall(election_years_only)
-
 
 if __name__ == "__main__":
    main()
