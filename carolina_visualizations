@@ -25,13 +25,6 @@ winner_df.loc[:, 'presidential_nominee'] = winner_df['presidential_nominee'].rep
     "Donald J. Trump": "Donald Trump (2024)"
 })
 
-# winner_df['presidential_nominee'] = winner_df['presidential_nominee'].replace({
-#     "Barack Obama": "Barack Obama (2012)",
-#     "Donald Trump": "Donald Trump (2016)",
-#     "Joseph R. Biden": "Joe Biden (2020)",
-#     "Donald J. Trump": "Donald Trump (2024)"
-# })
-
 # boxplot for the popularity of songs based on the candidate that won
 plt.figure(figsize=(10, 6))
 winner_df.boxplot(column='popularity', by='presidential_nominee', grid=False)
@@ -41,13 +34,3 @@ plt.xlabel('Presidential Nominee')
 plt.ylabel('Song Popularity')
 plt.xticks(rotation=45)
 plt.show()
-
-################################
-
-# Insert Dash's code
-
-################################
-
-# MIA'S CODE
-
-################################
