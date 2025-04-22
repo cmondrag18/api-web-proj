@@ -4,7 +4,7 @@ from collections import defaultdict
 import matplotlib.ticker as mtick
 
 # Connect to DB
-conn = sqlite3.connect('sql_processing_final.db')
+conn = sqlite3.connect('sql_processing_take2.db')
 cursor = conn.cursor()
 
 # All 11 genres

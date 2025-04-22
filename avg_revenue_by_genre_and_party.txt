@@ -1,46 +1,46 @@
 Average Revenue by Genre and Winning Party (2012, 2016, 2020, 2024)
 
 Sci-Fi:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $942,059,810
+  Republican Wins: $1,246,560,030
 
 Romance:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $438,869,034
+  Republican Wins: $650,549,696
 
 Drama:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $771,231,423
+  Republican Wins: $856,919,882
 
 Comedy:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $598,480,232
+  Republican Wins: $1,363,731,908
 
 Documentary:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $21,889,354
+  Republican Wins: $62,000,000
 
 Action:
-  Democratic Wins: $0
+  Democratic Wins: $507,119,058
   Republican Wins: $0
 
 Animation:
-  Democratic Wins: $0
+  Democratic Wins: $507,119,058
   Republican Wins: $0
 
 Adventure:
-  Democratic Wins: $0
+  Democratic Wins: $251,410,631
   Republican Wins: $0
 
 Fantasy:
-  Democratic Wins: $0
+  Democratic Wins: $764,111,313
   Republican Wins: $0
 
 Thriller:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $1,108,594,176
+  Republican Wins: $410,016,366
 
 Mystery:
-  Democratic Wins: $0
-  Republican Wins: $0
+  Democratic Wins: $236,177,234
+  Republican Wins: $263,877,148
 

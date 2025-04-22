@@ -5,7 +5,7 @@ import matplotlib.ticker as mtick
 import os
 
 # Connect to your database
-conn = sqlite3.connect('sql_processing_final.db')
+conn = sqlite3.connect('sql_processing_take2.db')
 cursor = conn.cursor()
 
 # Define all 11 target genres and election years

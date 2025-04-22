@@ -2,7 +2,7 @@ import sqlite3
 import matplotlib.pyplot as plt
 
 # Connect to the database
-conn = sqlite3.connect('sql_processing_final.db')
+conn = sqlite3.connect('sql_processing_take2.db')
 cursor = conn.cursor()
 
 
