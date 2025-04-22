@@ -7,58 +7,51 @@ import pandas as pd
 json_files = ['2024_top_songs.json', '2020_top_songs.json', '2016_top_songs.json', '2012_top_songs.json']
 
 
-conn = sqlite3.connect('sql_processing_present.db')
+conn = sqlite3.connect('sql_processing_take2.db')
 cursor = conn.cursor()
 
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS music_genres (
-   genre_id INTEGER PRIMARY KEY AUTOINCREMENT,
-   genre_name TEXT UNIQUE NOT NULL
+   genre_id INTEGER PRIMARY KEY,
+   genre_name TEXT UNIQUE
 )
 ''')
 
-# found every genre in the JSON files and saved them into music_genre SQL table
-genres = [
-    ("female vocalists",),
-    ("rnb",),
-    ("pop",),
-    ("indie pop",),
-    ("indie",),
-    ("Hip-Hop",),
-    ("electronic",),
-    ("rock",),
-    ("soul",),
-    ("acoustic",),
-    ("country",),
-    ("House",),
-    ("dubstep",),
-    ("singer-songwriter",),
-    ("Reggaeton",),
-    ("cloud rap",),
-    ("drill",),
-    ("k-pop",),
-    ("psychedelic pop",),
-    ("seen live",),
-    ("blues",),
-    ("mexico",),
-    ("trap",),
-    ("rap",),
-    ("jamaican",)
-]
+# Collect all unique genres from the JSON files
+genres = set()
+for json_file in json_files:
+    with open(json_file, 'r') as f:
+        data = json.load(f)
 
-# Insert genres into the music_genres table
-for genre in genres:
-    cursor.execute('''INSERT OR IGNORE INTO music_genres (genre_name) VALUES (?)''', genre)
+    for year, tracks in data.items():
+        for track in tracks:
+            genres.add(track["genre"])
+
+# Convert the set to a list for easier processing
+genres_list = list(genres)
+
+# Set the counter and the batch size (25 genres at a time)
+counter = 0
+batch_size = 25
+
+# Insert genres into the music_genres table, up to 25 genres
+for genre in genres_list:
+    if counter >= batch_size:
+        break  # Stop once 25 genres have been inserted
+    cursor.execute("INSERT OR IGNORE INTO music_genres (genre_name) VALUES (?)", (genre,))
+    counter += 1
+
+# Commit the transaction to the database
+conn.commit()
+
+# Optionally, print how many genres were inserted
+print(f"Inserted {counter} genres.")
 
 
-cursor.execute("DROP TABLE IF EXISTS tracks")
-
-# create tracks table
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS tracks (
    track_name TEXT,
    genre_id INTEGER,
-   album TEXT,
    release_date TEXT,
    popularity INTEGER,
    year INTEGER,
@@ -66,14 +59,14 @@ CREATE TABLE IF NOT EXISTS tracks (
 )
 ''')
 
-# finds number of records already inserted
+# Find the number of records already inserted
 cursor.execute("SELECT COUNT(*) FROM tracks")
 existing_records = cursor.fetchone()[0]
 
 insert_count = 0
-processed_count = 0  # keeps track of records processed from the JSON file
+processed_count = 0  # Keeps track of records processed from the JSON file
 
-# opens json files for top songs of each year
+# Open JSON files for top songs of each year
 for json_file in json_files:
     with open(json_file, 'r') as f:
         data = json.load(f)
@@ -81,17 +74,17 @@ for json_file in json_files:
     for year, tracks in data.items():
         for track in tracks:
             if insert_count >= 25:
-                break  # stops at 25
-            
-            # ensures that duplicate tracks are not re-added
+                break  # Stops at 25
+
+            # Ensure that duplicate tracks are not re-added
             cursor.execute("SELECT 1 FROM tracks WHERE track_name = ? AND year = ?", (track["track_name"], int(year)))
-            if cursor.fetchone():  # skips track that already exists
+            if cursor.fetchone():  # Skips track that already exists
                 continue
 
-            # gets the genre_id from the music_genres table based on the genre name
+            # Get the genre_id from the music_genres table based on the genre name
             cursor.execute("SELECT genre_id FROM music_genres WHERE genre_name = ?", (track["genre"],))
             genre_id = cursor.fetchone()
-            
+
             if genre_id:
                 genre_id = genre_id[0]
             else:
@@ -99,13 +92,12 @@ for json_file in json_files:
 
             # Insert new records that haven't been inserted yet
             track_name = track["track_name"]
-            album = track["album"]
             release_date = track["release_date"]
             popularity = track["popularity"]
 
-            cursor.execute('''INSERT INTO tracks (track_name, genre_id, album, release_date, popularity, year)
-                            VALUES (?, ?, ?, ?, ?, ?)''',
-                            (track_name, genre_id, album, release_date, popularity, int(year)))
+            cursor.execute('''INSERT INTO tracks (track_name, genre_id, release_date, popularity, year)
+                            VALUES (?, ?, ?, ?, ?)''',
+                            (track_name, genre_id, release_date, popularity, int(year)))
 
             insert_count += 1  # Increment insert_count after each insertion
             processed_count += 1  # Count the number of processed records
@@ -114,7 +106,6 @@ for json_file in json_files:
             break  # Stop processing further data after 25 records
     if insert_count >= 25:
         break  # Stop processing files once 25 records have been inserted
-
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS parties (
    party_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -133,7 +124,7 @@ CREATE TABLE IF NOT EXISTS candidates (
 ''')
 
 # Create the election_results table
-cursor.execute("DROP TABLE IF EXISTS election_results")
+# cursor.execute("DROP TABLE IF EXISTS election_results")
 
 # Recreate the election_results table with the updated schema
 cursor.execute('''
@@ -277,33 +268,23 @@ print(f"{insert_count} new movies inserted into box_office_movies.")
 # END OF MIA CODE
 
 
-#created separate music_genres table to hold music genres and an integer value
+
+
+# Create the 'yes_or_no' table to store winner status as integers (1 for 'yes' and 2 for 'no')
 cursor.execute('''
-CREATE TABLE IF NOT EXISTS music_genres (
-   genre_id INTEGER PRIMARY KEY,
-   genre_name TEXT UNIQUE
+CREATE TABLE IF NOT EXISTS yes_or_no (
+    winner_id INTEGER PRIMARY KEY,
+    winner_status TEXT UNIQUE NOT NULL
 )
 ''')
 
+# Insert 'yes' and 'no' into the yes_or_no table separately
+cursor.execute("INSERT OR IGNORE INTO yes_or_no (winner_status) VALUES ('yes')")
+cursor.execute("INSERT OR IGNORE INTO yes_or_no (winner_status) VALUES ('no')")
 
-genres = set()  # To store unique genres from music data
-for json_file in json_files:
-   with open(json_file, 'r') as f:
-       data = json.load(f)
-  
-   for year, tracks in data.items():
-       for track in tracks:
-           genres.add(track["genre"])
-
-
-for genre in genres:
-   cursor.execute("INSERT OR IGNORE INTO music_genres (genre_name) VALUES (?)", (genre,))
-
-
-# create the 'music_election' table: outer join between 'tracks' and 'election_results' on 'year'
-cursor.execute("DROP TABLE IF EXISTS music_election")  # drop if already exists
+# Create the 'music_election' table: outer join between 'tracks' and 'election_results' on 'year'
 cursor.execute('''
-CREATE TABLE music_election AS
+CREATE TABLE IF NOT EXISTS music_election AS
 SELECT
    t.year,
    t.track_name AS title,
@@ -316,20 +297,21 @@ SELECT
    e.electoral_vote_percentage,
    e.popular_vote,
    e.popular_vote_percentage,
-   e.winner,
+   -- Ensure we get the correct winner_id from yes_or_no table (1 for 'yes' and 2 for 'no')
+   ws.winner_id AS winner,  -- This will insert 1 for 'yes' and 2 for 'no'
    t.release_date  -- Explicitly include release_date here
 FROM tracks t
 LEFT OUTER JOIN election_results e ON t.year = e.year
-LEFT OUTER JOIN music_genres g ON t.genre_id = g.genre_name
+LEFT OUTER JOIN music_genres g ON t.genre_id = g.genre_id  -- Ensure you are joining on the correct key (genre_id, not genre_name)
+LEFT OUTER JOIN yes_or_no ws ON LOWER(e.winner) = LOWER(ws.winner_status)  -- Normalize case by converting both to lowercase
 GROUP BY t.year, t.track_name  -- Group by year and track_name to remove duplicates
 ORDER BY t.year;
+
 ''')
 
-
-# create the 'movie_election' table: join box_office_movies, movie_genre_id, and election_results
-cursor.execute("DROP TABLE IF EXISTS movie_election")
+# Create the 'movie_election' table: join box_office_movies, movie_genre_id, and election_results
 cursor.execute('''
-CREATE TABLE movie_election AS
+CREATE TABLE IF NOT EXISTS movie_election AS
 SELECT
    b.year,
    b.title,
@@ -342,12 +324,15 @@ SELECT
    MAX(e.electoral_vote_percentage) AS electoral_vote_percentage,  -- Aggregate electoral vote percentage
    MAX(e.popular_vote) AS popular_vote,  -- Aggregate popular vote
    MAX(e.popular_vote_percentage) AS popular_vote_percentage,  -- Aggregate popular vote percentage
-   MAX(e.winner) AS winner  -- Aggregate winner
+   MAX(ws.winner_id) AS winner  -- Aggregate winner from the yes_or_no table
 FROM box_office_movies b
 LEFT OUTER JOIN election_results e ON b.year = e.year
+LEFT OUTER JOIN yes_or_no ws ON LOWER(e.winner) = LOWER(ws.winner_status)  -- Normalize both sides to lowercase
 GROUP BY b.year, b.title, b.revenue  -- Group by movie properties
 ORDER BY b.year;
+
 ''')
+
 
 
 
